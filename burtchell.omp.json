@@ -80,59 +80,6 @@
       "alignment": "right",
       "segments": [
         {
-          "background": "transparent",
-          "foreground": "p:green",
-          "properties": {
-            "display_mode": "files",
-            "fetch_package_manager": false,
-            "home_enabled": false
-          },
-          "style": "plain",
-          "template": "\uf898 ",
-          "type": "node"
-        },
-        {
-          "background": "transparent",
-          "foreground": "p:blue",
-          "properties": {
-            "fetch_version": false
-          },
-          "style": "powerline",
-          "template": "\ufcd1 ",
-          "type": "go"
-        },
-        {
-          "background": "transparent",
-          "foreground": "p:yellow",
-          "properties": {
-            "display_mode": "files",
-            "fetch_version": true,
-            "fetch_virtual_env": false
-          },
-          "style": "plain",
-          "template": "\ue235 ",
-          "type": "python"
-        },
-        {
-          "background": "p:orange",
-          "background_templates": [
-            "{{if eq \"Charging\" .State.String}}p:green{{end}}",
-            "{{if eq \"Discharging\" .State.String}}p:orange{{end}}",
-            "{{if eq \"Full\" .State.String}}p:green{{end}}"
-          ],
-          "foreground": "#262626",
-          "leading_diamond": "\ue0b6",
-          "properties": {
-            "charged_icon": "\uf58e ",
-            "charging_icon": "\uf1e6 ",
-            "discharging_icon": "\ue234 "
-          },
-          "style": "diamond",
-          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 ",
-          "trailing_diamond": "\ue0b4 ",
-          "type": "battery"
-        },
-        {
           "background": "p:blue",
           "foreground": "p:white",
           "style": "diamond",
