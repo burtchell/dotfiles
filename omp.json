@@ -119,17 +119,12 @@
           "type": "python"
         },
         {
-          "background": "transparent",
+          "background": "p:blue",
           "foreground": "p:white",
-          "style": "plain",
-          "template": "in <p:blue><b>{{ .Name }}</b></> ",
-          "type": "shell"
-        },
-        {
-          "background": "transparent",
-          "foreground": "p:white",
-          "style": "plain",
-          "template": "at <p:blue><b>{{ .CurrentDate | date \"15:04:05\" }}</b></>",
+          "style": "diamond",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "{{ .CurrentDate | date \"15:04:05\" }}",
           "type": "time"
         }
       ],
