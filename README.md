@@ -1,6 +1,6 @@
-# configs
+# terminal configs
 
-The repository contains my personal configuration files, in order to make environment customization easier on multiple machines.
+The repository contains my personal terminal/shell/prompt configuration files, in order to make environment customization easier on multiple machines.
 
 ## All Platforms
 
