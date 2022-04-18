@@ -9,7 +9,7 @@ Cross-platform configuration files are in the parent directory.
 
 ## Windows
 
-Clone this repository in ```C:/Users/[username]/```. The following files are contained in [[```/Windows/```](https://github.com/dukeofjukes/configs/tree/main/Windows), and need to be copied into the proper directories to take effect:
+Clone this repository in ```C:/Users/[username]/```. The following files are contained in [```/Windows/```](https://github.com/dukeofjukes/configs/tree/main/Windows), and need to be copied into the proper directories to take effect:
 - the Windows Terminal [```settings.json```](https://github.com/dukeofjukes/configs/blob/main/Windows/terminal.settings.json) file with default color scheme, font, keyboard shortcuts, etc. Copy the contents of this file and paste them wherever Windows installs Terminal.
 - the PowerShell [```Microsoft.PowerShell_profile.ps1```](https://github.com/dukeofjukes/configs/blob/main/Windows/Microsoft.PowerShell_profile.ps1) file that contains shell intializations, aliases, utility functions, etc. Copy this file into the $PROFILE location to take effect. The following must be installed for maximum functionality:
   1. [oh-my-posh](https://ohmyposh.dev/)
