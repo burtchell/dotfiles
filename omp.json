@@ -5,16 +5,11 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "p:yellow",
-          "foreground": "p:black",
+          "background": "p:blue",
+          "foreground": "p:white",
           "leading_diamond": "\ue0b6",
-          "properties": {
-            "display_host": false
-          },
           "style": "diamond",
-          "template": " {{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }} ",
-          "trailing_diamond": "\ue0b0",
-          "type": "session"
+          "type": "shell"
         },
         {
           "background": "p:orange",
@@ -65,12 +60,11 @@
           "type": "root"
         },
         {
-          "background": "p:blue",
+          "background": "p:green",
           "background_templates": [
             "{{ if gt .Code 0 }}p:red{{ end }}"
           ],
           "foreground": "p:white",
-          "leading_diamond": "<transparent,background>\ue0b0</>",
           "properties": {
             "always_enabled": true
           },
@@ -83,6 +77,7 @@
       "type": "prompt"
     },
     {
+      "alignment": "right",
       "segments": [
         {
           "background": "transparent",
@@ -119,6 +114,25 @@
           "type": "python"
         },
         {
+          "background": "p:orange",
+          "background_templates": [
+            "{{if eq \"Charging\" .State.String}}p:green{{end}}",
+            "{{if eq \"Discharging\" .State.String}}p:orange{{end}}",
+            "{{if eq \"Full\" .State.String}}p:green{{end}}"
+          ],
+          "foreground": "#262626",
+          "leading_diamond": "\ue0b6",
+          "properties": {
+            "charged_icon": "\uf58e ",
+            "charging_icon": "\uf1e6 ",
+            "discharging_icon": "\ue234 "
+          },
+          "style": "diamond",
+          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 ",
+          "trailing_diamond": "\ue0b4 ",
+          "type": "battery"
+        },
+        {
           "background": "p:blue",
           "foreground": "p:white",
           "style": "diamond",
@@ -128,7 +142,23 @@
           "type": "time"
         }
       ],
-      "type": "rprompt"
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "p:white",
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": ">",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
     }
   ],
   "console_title_template": "{{ .Shell }} in {{ .Folder }}",
@@ -147,35 +177,6 @@
     "foreground": "p:black",
     "template": "<p:yellow,transparent>\ue0b6</><,p:yellow> > </><p:yellow,transparent>\ue0b0</> "
   },
-  "tooltips": [
-    {
-      "background": "p:orange",
-      "foreground": "p:white",
-      "leading_diamond": "\ue0b6",
-      "properties": {
-        "display_default": true
-      },
-      "style": "diamond",
-      "template": " \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
-      "tips": [
-        "aws"
-      ],
-      "trailing_diamond": "\ue0b4",
-      "type": "aws"
-    },
-    {
-      "background": "p:blue",
-      "foreground": "p:white",
-      "leading_diamond": "\ue0b6",
-      "style": "diamond",
-      "template": " \ufd03 {{ .Name }} ",
-      "tips": [
-        "az"
-      ],
-      "trailing_diamond": "\ue0b4",
-      "type": "az"
-    }
-  ],
   "transient_prompt": {
     "background": "transparent",
     "foreground": "p:black",
