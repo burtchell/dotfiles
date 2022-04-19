@@ -15,3 +15,4 @@ Set-PSReadLineOption -PredictionSource History
 Set-Alias g git
 Set-Alias exp explorer
 Set-Alias grep findstr
+Set-Alias ll dir
