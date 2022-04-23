@@ -34,3 +34,6 @@ eval "$(oh-my-posh init bash --config /mnt/c/Users/Brandon/configs/burtchell.omp
 
 # open on windows side
 cd /mnt/c/Users/Brandon
+
+# run neofetch on welcome
+neofetch
