@@ -39,5 +39,5 @@ The following files are contained in [```/Linux/```](https://github.com/dukeofju
 
 ## 3) Configurations for all platforms
 
-- My custom Oh My Posh theme ([```burtchell.omp.json```](https://github.com/dukeofjukes/dotfiles/blob/main/burtchell.omp.json)) should automatically installed by each operating system's shell configs from above. Nothing else to do here.
+- My custom Oh My Posh theme [```burtchell.omp.json```](https://github.com/dukeofjukes/dotfiles/blob/main/burtchell.omp.json) should automatically installed by each operating system's shell configs from above. Nothing else to do here.
 - The neofetch config is in [```config.conf```](https://github.com/dukeofjukes/dotfiles/blob/main/config.conf), and needs to be copied to ```~/.config/neofetch/``` in both operating systems.
