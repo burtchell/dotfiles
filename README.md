@@ -26,6 +26,7 @@ The following files are contained in [```/Linux/```](https://github.com/dukeofju
 - the linux [```.profile```](https://github.com/dukeofjukes/configs/blob/main/Linux/.profile) file contains shell path variables and inits. Copy its contents in ```~/.profile```. Ensure these programs are installed in order for path variables to function properly:
   1. [homebrew](https://brew.sh)
   2. [oh-my-posh](https://ohmyposh.dev/)
+  3. [neofetch](https://github.com/dylanaraps/neofetch)
 - the bash [```.bashrc```](https://github.com/dukeofjukes/configs/blob/main/Linux/.bashrc) file contains aliases and more. Copy its contents in ```~/.bashrc```. Ensure these programs are installed in order for aliases to function properly:
   1. [GitHub CLI](https://github.com/cli/cli)
   2. [z (cd history)](https://github.com/rupa/z): Download ```/z-master/``` folder to ```/home/[username]```.
