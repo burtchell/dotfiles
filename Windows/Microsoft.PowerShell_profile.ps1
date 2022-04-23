@@ -38,3 +38,5 @@ Set-Alias -Name 'gp' -Value 'GitPush' -Scope Global
 Set-Alias exp explorer
 Set-Alias grep findstr
 Set-Alias ll dir
+
+neofetch
