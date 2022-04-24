@@ -16,10 +16,10 @@ Install the following programs/packages on Windows:
 8. [z (cd history)](https://www.powershellgallery.com/packages/z/1.1.13)
 9. [neofetch](https://github.com/dylanaraps/neofetch)
 
-Clone this repository in `C:/Users/[username]/`. The following files are contained in [`/Windows/`](https://github.com/dukeofjukes/configs/tree/main/Windows), and need to be copied into the proper directories to take effect:
+Clone this repository in `C:/Users/[username]/`. The following files are contained in [`/Windows/`](https://github.com/dukeofjukes/configs/tree/main/Windows), and need to be applied:
 
 - the Windows Terminal [`settings.json`](https://github.com/dukeofjukes/configs/blob/main/Windows/terminal.settings.json) file with default color scheme, font, keyboard shortcuts, etc. Copy the contents of this file and paste them wherever Windows installs Terminal. A [Nerd Font](https://www.nerdfonts.com/font-downloads) will need to be installed for the font setting to be applied (and for oh-my-posh to work in the next step). I prefer "Caskaydia Cove".
-- the PowerShell [`burtchell.pwsh.ps1`](https://github.com/dukeofjukes/configs/blob/main/Windows/burtchell.pwsh.ps1) contains shell intializations, aliases, utility functions, etc. Copy the following line into PowerShell's `$PROFILE` (run `echo $PROFILE` to find, otherwise create the file: `~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1`):
+- [`burtchell.pwsh.ps1`](https://github.com/dukeofjukes/configs/blob/main/Windows/burtchell.pwsh.ps1) contains PowerShell intializations, aliases, utility functions, etc. To apply it, copy the following line into PowerShell's `$PROFILE` (run `echo $PROFILE` to find, otherwise create the file: `~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1`):
 
 ```
 ~\dotfiles\Windows\burtchell.pwsh.ps1
@@ -40,7 +40,7 @@ Install the following packages:
 5. [z (cd history)](https://github.com/rupa/z): Place the `/z-master/` directory in `/home/[username]/`.
 6. [exa (modernized ls)](https://github.com/ogham/exa)
 
-The following files are contained in [`/Linux/`](https://github.com/dukeofjukes/configs/tree/main/Linux) and need to be applied in the linux config files.
+The following files are contained in [`/Linux/`](https://github.com/dukeofjukes/configs/tree/main/Linux) and need to be applied in the linux config files:
 
 - [`profile.sh`](https://github.com/dukeofjukes/configs/blob/main/Linux/profile.sh) contains shell initializations. To apply it, copy the following function into `~/.profile`:
 
