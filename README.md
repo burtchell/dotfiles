@@ -7,11 +7,11 @@ This repository contains my personal terminal/shell/prompt configuration files i
 Install the following programs/packages on Windows:
   1. [Windows Terminal](https://github.com/microsoft/terminal)
   2. [Powershell Core](https://github.com/PowerShell/PowerShell)
-  3. [Scoop](https://github.com/ScoopInstaller/Scoop)
-  4. [Oh My Posh](https://ohmyposh.dev/)
-  5. [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
-  6. [PSReadLine](https://github.com/PowerShell/PSReadLine): Run ```Install-Module PSReadLine -AllowPrerelease -Force``` in order to get the pre-release version with list-view.
-  7. [Git](https://gitforwindows.org/) and [GitHub CLI](https://github.com/cli/cli)
+  3. [Git](https://gitforwindows.org/) (ensure Git Bash installs as well) and [GitHub CLI](https://github.com/cli/cli)
+  4. [Scoop](https://github.com/ScoopInstaller/Scoop)
+  5. [Oh My Posh](https://ohmyposh.dev/)
+  6. [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
+  7. [PSReadLine](https://github.com/PowerShell/PSReadLine): Run ```Install-Module PSReadLine -AllowPrerelease -Force``` in order to get the pre-release version with list-view.
   8. [z (cd history)](https://www.powershellgallery.com/packages/z/1.1.13)
   9. [neofetch](https://github.com/dylanaraps/neofetch)
 
