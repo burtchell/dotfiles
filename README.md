@@ -1,13 +1,13 @@
 # dotfiles
 
-This repository contains my personal terminal/shell/prompt configuration files in order to make environment customization easier on multiple machines. This readme is structured to be followed in order, starting with installing necessary Windows programs/packages, then setting up Ubuntu on WSL and installing the Linux-side packages.
+This repository contains my personal terminal/shell/prompt configuration files in order to make environment customization easier on multiple machines. This readme is structured to be followed in order, starting with installing necessary Windows programs/packages, then setting up Ubuntu on WSL and installing the Linux-side packages. If someone stumbles upon this repo and wants to try out my setup, be sure to change the `/Brandon/` user directory name when it appears in any of the script files.
 
 ## 1) Windows
 
 Install the following programs/packages on Windows:
 
-1. [Windows Terminal](https://github.com/microsoft/terminal)
-2. [Powershell Core](https://github.com/PowerShell/PowerShell)
+1. [Windows Terminal](https://github.com/microsoft/terminal) (recommended: Microsoft Store)
+2. [Powershell Core](https://github.com/PowerShell/PowerShell) (recommended: Microsoft Store)
 3. [Scoop](https://github.com/ScoopInstaller/Scoop)
 4. [Oh My Posh](https://ohmyposh.dev/)
 5. [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
@@ -29,7 +29,7 @@ Afterwards, all Windows configuration should be applied. Next, we'll do the same
 
 ## 2) Ubuntu on WSL2
 
-Run `wsl --install -d Ubuntu` to install the Ubuntu subsystem. Note that when using Windows Subsystem for Linux (WSL), the Windows C drive is located in `/mnt/c/`. Therefore, if this repository is already cloned in `/mnt/c/Users/[username]/`, it can be accessed via WSL and doesn't need to be cloned again on the Linux side.
+Run `wsl --install -d Ubuntu` to install the Ubuntu subsystem. To ensure WSL2 was used, run `wsl -l -v` and check the version number. If not version 2, see [how to upgrade](https://docs.microsoft.com/en-us/windows/wsl/install#upgrade-version-from-wsl-1-to-wsl-2). Note that when using Windows Subsystem for Linux (WSL), the Windows C drive is located in `/mnt/c/`. Therefore, if this repository is already cloned in `/mnt/c/Users/[username]/`, it can be accessed via WSL and doesn't need to be cloned again on the Linux side.
 
 Install the following packages:
 
@@ -38,7 +38,7 @@ Install the following packages:
 3. [neofetch](https://github.com/dylanaraps/neofetch)
 4. [GitHub CLI](https://github.com/cli/cli) (git should be preinstalled by Ubuntu)
 5. [z (cd history)](https://github.com/rupa/z): Place the `/z-master/` directory in `/home/[username]/`.
-6. [exa (modernized ls)](https://github.com/ogham/exa)
+6. [exa (modernized ls)](https://github.com/ogham/exa) (as of 2021/04/27: install using macOS homebrew instructions)
 
 The following files are contained in [`/Linux/`](https://github.com/dukeofjukes/configs/tree/main/Linux) and need to be applied in the linux config files:
 
@@ -57,6 +57,8 @@ if [ -f /mnt/c/Users/[username]/dotfiles/Linux/bashrc.sh ]; then
     . /mnt/c/Users/[username]/dotfiles/Linux/bashrc.sh
 fi
 ```
+
+NOTE: CRLF/LF formats can get swapped when cloning/pushing with git on multiple operating systems, ensure `profile.sh` and `bashrc.sh` are in LF format to avoid headache.
 
 ## 3) Configurations for all platforms
 
