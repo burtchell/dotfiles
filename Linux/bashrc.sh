@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 # z (cd history)
 . /home/brandon/z-master/z.sh
 
