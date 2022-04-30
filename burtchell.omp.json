@@ -5,11 +5,12 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "shell",
+          "type": "os",
+          "style": "diamond",
           "background": "p:blue",
           "foreground": "p:white",
           "leading_diamond": "\ue0b6",
-          "style": "diamond"
+          "template": " {{.Icon}} "
         },
         {
           "type": "path",
@@ -91,13 +92,13 @@
       "alignment": "right",
       "segments": [
         {
+          "type": "time",
           "background": "p:blue",
           "foreground": "p:white",
           "style": "diamond",
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b4",
-          "template": "{{ .CurrentDate | date \"15:04\" }}",
-          "type": "time"
+          "template": "{{ .CurrentDate | date \"15:04\" }}"
         }
       ],
       "type": "prompt"
@@ -107,13 +108,13 @@
       "newline": true,
       "segments": [
         {
+          "type": "exit",
           "foreground": "p:white",
           "properties": {
             "always_enabled": true
           },
           "style": "plain",
-          "template": ">",
-          "type": "exit"
+          "template": ">"
         }
       ],
       "type": "prompt"
@@ -156,16 +157,6 @@
     "red": "#BF616A",
     "white": "#E5E9F0",
     "yellow": "#EBCB8B"
-  },
-  "secondary_prompt": {
-    "background": "transparent",
-    "foreground": "p:black",
-    "template": "<p:yellow,transparent>\ue0b6</><,p:yellow> > </><p:yellow,transparent>\ue0b0</> "
-  },
-  "transient_prompt": {
-    "background": "transparent",
-    "foreground": "p:black",
-    "template": "<p:yellow,transparent>\ue0b6</><,p:yellow> {{ .Folder }} </><p:yellow,transparent>\ue0b0</> "
   },
   "version": 2
 }
