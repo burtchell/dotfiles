@@ -6,8 +6,8 @@ This repository contains my personal terminal/shell/prompt configuration files i
 
 Install the following programs/packages on Windows:
 
-1. [Windows Terminal](https://github.com/microsoft/terminal) (recommended: Microsoft Store)
-2. [Powershell Core](https://github.com/PowerShell/PowerShell) (recommended: Microsoft Store)
+1. [Windows Terminal](https://github.com/microsoft/terminal) (recommended: install through Microsoft Store)
+2. [Powershell Core](https://github.com/PowerShell/PowerShell) (recommended: install through winget or other command-line package manager)
 3. [Scoop](https://github.com/ScoopInstaller/Scoop)
 4. [Oh My Posh](https://ohmyposh.dev/)
 5. [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
@@ -64,3 +64,13 @@ NOTE: CRLF/LF formats can get swapped when cloning/pushing with git on multiple 
 
 - My custom Oh My Posh theme [`burtchell.omp.json`](https://github.com/dukeofjukes/dotfiles/blob/main/burtchell.omp.json) should automatically installed by each operating system's shell configs from above. Nothing else to do here.
 - The neofetch config is in [`config.conf`](https://github.com/dukeofjukes/dotfiles/blob/main/config.conf), and needs to be copied to `~/.config/neofetch/` in both operating systems.
+
+
+## TODO:
+
+- Convert dotfiles to link to this repo rather than running the shell script (better maintainability).
+- Write a boostrapper script for Windows and Linux that installs all necessary packages and links dotfiles files automatically (to be run when setting up a brand new system).
+- Add section for standalone Linux (no WSL).
+- Add section for macOS (once I get a new laptop).
+
+
