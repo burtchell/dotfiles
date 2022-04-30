@@ -6,8 +6,8 @@ This repository contains my personal terminal/shell/prompt configuration files i
 
 Install the following programs/packages on Windows:
 
-1. [Windows Terminal](https://github.com/microsoft/terminal) (recommended: Microsoft Store)
-2. [Powershell Core](https://github.com/PowerShell/PowerShell) (recommended: Microsoft Store)
+1. [Windows Terminal](https://github.com/microsoft/terminal) (recommended: install through Microsoft Store)
+2. [Powershell Core](https://github.com/PowerShell/PowerShell) (recommended: install through winget or other command-line package manager)
 3. [Scoop](https://github.com/ScoopInstaller/Scoop)
 4. [Oh My Posh](https://ohmyposh.dev/)
 5. [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
