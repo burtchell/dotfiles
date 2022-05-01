@@ -1,8 +1,10 @@
 # dotfiles
 
-This repository contains my personal terminal/shell/prompt configuration files in order to make environment customization easier on multiple machines. This readme is structured to be followed in order, starting with installing necessary Windows programs/packages, then setting up Ubuntu on WSL and installing the Linux-side packages. If someone stumbles upon this repo and wants to try out my setup, be sure to change the `/Brandon/` user directory name when it appears in any of the script files.
+This repository contains my personal terminal/shell/prompt configuration files in order to make environment customization easier on multiple machines. This README is structured to be followed in order, starting with installing necessary Windows programs/packages, then setting up Ubuntu on WSL and installing the Linux-side packages. 
 
-## 1) Windows
+Note: If someone stumbles upon this repo and wants to try out my setup, be sure to change the `/Brandon/` user directory name when it appears in any of the script files, and to skim through all files to ensure you're not using my git name or email.
+
+## Windows
 
 Install the following programs/packages on Windows:
 
@@ -26,11 +28,11 @@ Clone this repository in `C:/Users/[username]/`. The following files are contain
 ~\dotfiles\Windows\burtchell.pwsh.ps1
 ```
 
-Afterwards, all Windows configuration should be applied. Next, we'll do the same to the Ubuntu subsystem.
+Afterwards, all Windows configuration should be applied. Next, we'll do the same to the WSL.
 
-## 2) Ubuntu on WSL2
+## Linux (WSL)
 
-Run `wsl --install -d Ubuntu` to install the Ubuntu subsystem. To ensure WSL2 was used, run `wsl -l -v` and check the version number. If not version 2, see [how to upgrade](https://docs.microsoft.com/en-us/windows/wsl/install#upgrade-version-from-wsl-1-to-wsl-2). Note that when using Windows Subsystem for Linux (WSL), the Windows C drive is located in `/mnt/c/`. Therefore, if this repository is already cloned in `/mnt/c/Users/[username]/`, it can be accessed via WSL and doesn't need to be cloned again on the Linux side.
+Run `wsl --install -d Ubuntu` to install the Ubuntu subsystem. To ensure WSL2 was used, run `wsl -l -v` and check the version number. If not version 2, see [how to upgrade](https://docs.microsoft.com/en-us/windows/wsl/install#upgrade-version-from-wsl-1-to-wsl-2).
 
 Install the following packages:
 
@@ -42,37 +44,25 @@ Install the following packages:
 6. [z (cd history)](https://github.com/rupa/z): Place the `/z-master/` directory in `/home/[username]/`.
 7. [exa (modernized ls)](https://github.com/ogham/exa) (as of 2021/04/27: install using macOS homebrew instructions)
 
-The following files are contained in [`/Linux/`](https://github.com/dukeofjukes/configs/tree/main/Linux) and need to be applied in the linux config files:
-
-- [`profile.sh`](https://github.com/dukeofjukes/configs/blob/main/Linux/profile.sh) contains shell initializations. To apply it, copy the following function into `~/.profile`:
+Then, clone this repo into the user's home (`~`) directory:
 
 ```
-if [ -f /mnt/c/Users/[username]/dotfiles/Linux/profile.sh ]; then
-    . /mnt/c/Users/[username]/dotfiles/Linux/profile.sh
-fi
+gh repo clone dukeofjukes/dotfiles
+# or use SSH or HTTPS
 ```
 
-- [`bashrc.sh`](https://github.com/dukeofjukes/configs/blob/main/Linux/bashrc.sh) contains aliases and more. To apply it, copy the following function into `~/.bashrc`:
+Run this script to link all dotfiles to this repo:
 
 ```
-if [ -f /mnt/c/Users/[username]/dotfiles/Linux/bashrc.sh ]; then
-    . /mnt/c/Users/[username]/dotfiles/Linux/bashrc.sh
-fi
+. ~/dotfiles/linux/linkfiles.sh
 ```
-
-NOTE: CRLF/LF formats can get swapped when cloning/pushing with git on multiple operating systems, ensure `profile.sh` and `bashrc.sh` are in LF format to avoid headache.
-
-## 3) Configurations for all platforms
-
-- My custom Oh My Posh theme [`burtchell.omp.json`](https://github.com/dukeofjukes/dotfiles/blob/main/burtchell.omp.json) should automatically installed by each operating system's shell configs from above. Nothing else to do here.
-- The neofetch config is in [`config.conf`](https://github.com/dukeofjukes/dotfiles/blob/main/config.conf), and needs to be copied to `~/.config/neofetch/` in both operating systems.
-
 
 ## TODO:
 
-- Convert dotfiles to link to this repo rather than running the shell script (better maintainability).
-- Write a boostrapper script for Windows and Linux that installs all necessary packages and links dotfiles files automatically (to be run when setting up a brand new system).
-- Add section for standalone Linux (no WSL).
-- Add section for macOS (once I get a new laptop).
+- Convert dotfiles to link to repo rather than running the shell script (better maintainability).
+  - Done for Linux, need to do the same for Windows.
+- Write a bootstrapper script for Windows and Linux that installs all necessary packages (through homebrew, etc), and links all dotfiles.
+  - Done with linkfiles.sh on Linux.
+- Add section for macOS (once I get a macbook).
 
 

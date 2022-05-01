@@ -26,11 +26,8 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# homebrew
+# load homebrew packages
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# oh-my-posh (load from windows repo)
-eval "$(oh-my-posh init bash --config /mnt/c/Users/Brandon/dotfiles/burtchell.omp.json)"
-
-# open on windows side
-cd /mnt/c/Users/Brandon
+# load oh-my-posh theme
+eval "$(oh-my-posh init bash --config ~/dotfiles/burtchell.omp.json)"
