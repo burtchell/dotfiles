@@ -13,8 +13,9 @@ Install the following programs/packages on Windows:
 5. [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
 6. [PSReadLine](https://github.com/PowerShell/PSReadLine): Run `Install-Module PSReadLine -AllowPrerelease -Force` in order to get the pre-release version with list-view.
 7. [Git](https://gitforwindows.org/) and [GitHub CLI](https://github.com/cli/cli)
-8. [z (cd history)](https://www.powershellgallery.com/packages/z/1.1.13)
-9. [neofetch](https://github.com/dylanaraps/neofetch)
+8. [Node.js](https://nodejs.org/en/)
+9. [z (cd history)](https://www.powershellgallery.com/packages/z/1.1.13)
+10. [neofetch](https://github.com/dylanaraps/neofetch)
 
 Clone this repository in `C:/Users/[username]/`. The following files are contained in [`/Windows/`](https://github.com/dukeofjukes/configs/tree/main/Windows), and need to be applied:
 
@@ -37,8 +38,9 @@ Install the following packages:
 2. [oh-my-posh](https://ohmyposh.dev/)
 3. [neofetch](https://github.com/dylanaraps/neofetch)
 4. [GitHub CLI](https://github.com/cli/cli) (git should be preinstalled by Ubuntu)
-5. [z (cd history)](https://github.com/rupa/z): Place the `/z-master/` directory in `/home/[username]/`.
-6. [exa (modernized ls)](https://github.com/ogham/exa) (as of 2021/04/27: install using macOS homebrew instructions)
+5. [Node.js](https://nodejs.org/en/) via [WSL instructions](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl)
+6. [z (cd history)](https://github.com/rupa/z): Place the `/z-master/` directory in `/home/[username]/`.
+7. [exa (modernized ls)](https://github.com/ogham/exa) (as of 2021/04/27: install using macOS homebrew instructions)
 
 The following files are contained in [`/Linux/`](https://github.com/dukeofjukes/configs/tree/main/Linux) and need to be applied in the linux config files:
 
