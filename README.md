@@ -2,7 +2,7 @@
 
 This repository contains my personal terminal/shell/prompt configuration files in order to make environment customization easier on multiple machines. This README is structured to be followed in order, starting with installing necessary Windows programs/packages, then setting up Ubuntu on WSL and installing the Linux-side packages. 
 
-Note: If someone stumbles upon this repo and wants to try out my setup, be sure to change the `/Brandon/` user directory name when it appears in any of the script files, and to skim through all files to ensure you're not using my git name or email.
+Note: If someone stumbles upon this repo and wants to try out my setup, be sure to change the `/Brandon/` user directory name when it appears in any of the script files.
 
 ## Windows
 
@@ -39,7 +39,7 @@ Install the following packages:
 1. [homebrew](https://brew.sh)
 2. [oh-my-posh](https://ohmyposh.dev/)
 3. [neofetch](https://github.com/dylanaraps/neofetch)
-4. [GitHub CLI](https://github.com/cli/cli) (git should be preinstalled by Ubuntu)
+4. [GitHub CLI](https://github.com/cli/cli) (git is included in Ubuntu)
 5. [Node.js](https://nodejs.org/en/) via [WSL instructions](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl)
 6. [z (cd history)](https://github.com/rupa/z): Place the `/z-master/` directory in `/home/[username]/`.
 7. [exa (modernized ls)](https://github.com/ogham/exa) (as of 2021/04/27: install using macOS homebrew instructions)
@@ -59,10 +59,9 @@ Run this script to link all dotfiles to this repo:
 
 ## TODO:
 
+- Find a way to share .gitconfig without the user.name and user.email.
 - Convert dotfiles to link to repo rather than running the shell script (better maintainability).
   - Done for Linux, need to do the same for Windows.
 - Write a bootstrapper script for Windows and Linux that installs all necessary packages (through homebrew, etc), and links all dotfiles.
   - Done with linkfiles.sh on Linux.
 - Add section for macOS (once I get a macbook).
-
-
