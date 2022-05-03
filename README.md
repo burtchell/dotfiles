@@ -64,9 +64,6 @@ Run this script to link all dotfiles to this repo:
 
 ## TODO:
 
-- Find a way to share .gitconfig without the user.name and user.email.
-- Convert dotfiles to link to repo rather than running the shell script (better maintainability).
-  - Done for Linux, need to do the same for Windows.
-- Write a bootstrapper script for Windows and Linux that installs all necessary packages (through homebrew, etc), and links all dotfiles.
-  - Done with linkfiles.sh on Linux.
+- Find a way to share .gitconfig without the user.name and user.email, if my git configs end up getting more complex.
+- Write a bootstrapper script for Windows and Linux that installs all necessary packages (through homebrew, etc).
 - Add section for macOS (once I get a macbook).
