@@ -1,5 +1,5 @@
 # Init oh-my-posh
-oh-my-posh init pwsh --config ~/dotfiles/burtchell.omp.json | Invoke-Expression
+oh-my-posh init pwsh --config ~/dotfiles/burtchell.simple.omp.json | Invoke-Expression
 
 # Import terminal icons
 Import-Module -Name Terminal-Icons

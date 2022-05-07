@@ -8,7 +8,7 @@
           "type": "session",
           "style": "plain",
           "foreground": "p:white",
-          "template": "<p:yellow>{{ .UserName }}</> at <p:blue>{{ .HostName }}</> in "
+          "template": "<p:yellow>{{ .UserName }}</> at <p:cyan>{{ .HostName }}</> in "
         },
         {
           "type": "path",
@@ -26,8 +26,8 @@
           "foreground_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}p:yellow{{ end }}",
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:red{{ end }}",
-            "{{ if gt .Ahead 0 }}#49416D{{ end }}",
-            "{{ if gt .Behind 0 }}#7A306C{{ end }}"
+            "{{ if gt .Ahead 0 }}p:purple{{ end }}",
+            "{{ if gt .Behind 0 }}p:purple{{ end }}"
           ], 
           "style": "plain",
           "properties": {
@@ -63,13 +63,15 @@
   "palette": {
     "black": "#3B4252",
     "blue": "#81A1C1",
+    "cyan": "#88C0D0",
     "green": "#A3BE8C",
     "orange": "#D08770",
     "red": "#BF616A",
     "white": "#E5E9F0",
-    "yellow": "#EBCB8B"
+    "yellow": "#EBCB8B",
+    "purple": "#B48EAD"
   },
-  "__default_palette": {
+  "__default_omp_palette": {
     "black": "#262B44",
     "blue": "#4B95E9",
     "green": "#59C9A5",
@@ -81,20 +83,24 @@
   "__palenight_palette": {
     "black": "#000300",
     "blue": "#82aaff",
+    "cyan": "#89ddff",
     "green": "#c3e88d",
     "orange": "#f78c6c",
     "red": "#f07178",
     "white": "#eeffff",
-    "yellow": "#ffcb6b"
+    "yellow": "#ffcb6b",
+    "purple": "#c792ea"
   },
   "__nord_palette": {
     "black": "#3B4252",
     "blue": "#81A1C1",
+    "cyan": "#88C0D0",
     "green": "#A3BE8C",
     "orange": "#D08770",
     "red": "#BF616A",
     "white": "#E5E9F0",
-    "yellow": "#EBCB8B"
+    "yellow": "#EBCB8B",
+    "purple": "#B48EAD"
   },
   "version": 2
 }
