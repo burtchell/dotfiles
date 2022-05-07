@@ -5,5 +5,10 @@ set -U fish_greeting ""
 # Init oh-my-posh
 oh-my-posh init fish --config ~/dotfiles/burtchell.simple.omp.json | source
 
+function code
+  set location "$PWD/$argv"
+  open -n -b "com.microsoft.VSCode" --args $location
+end
+
 # Get aliases
 . ~/.config/fish/functions/aliases.fish
