@@ -41,13 +41,14 @@ Run `wsl --install -d Ubuntu` to install the Ubuntu subsystem. To ensure WSL2 wa
 
 Install the following packages:
 
+1. [iTerm2](https://iterm2.com/)
 1. [homebrew](https://brew.sh)
-2. [oh-my-posh](https://ohmyposh.dev/)
-3. [neofetch](https://github.com/dylanaraps/neofetch)
-4. [GitHub CLI](https://github.com/cli/cli) (git is included in Ubuntu)
-5. [Node.js](https://nodejs.org/en/) via [WSL instructions](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl)
-6. [z (cd history)](https://github.com/rupa/z): Place the `/z-master/` directory in `/home/[username]/`.
-7. [exa (modernized ls)](https://github.com/ogham/exa) (as of 2021/04/27: install using macOS homebrew instructions)
+1. [oh-my-posh](https://ohmyposh.dev/)
+1. [neofetch](https://github.com/dylanaraps/neofetch)
+1. [GitHub CLI](https://github.com/cli/cli)
+1. [Node.js](https://nodejs.org/en/) via [WSL instructions](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl)
+1. [z (cd history)](https://github.com/rupa/z): Place the `/z-master/` directory in `/home/[username]/`.
+1. [exa (modernized ls)](https://github.com/ogham/exa) (as of 2021/04/27: install using macOS homebrew instructions)
 
 Then, clone this repo into the user's home (`~`) directory:
 
@@ -62,8 +63,34 @@ Run this script to link all dotfiles to this repo:
 . ~/dotfiles/linux/linkfiles.sh
 ```
 
+## macOS
+
+Install the following packages:
+
+1. [homebrew](https://brew.sh)
+2. [oh-my-posh](https://ohmyposh.dev/)
+3. [neofetch](https://github.com/dylanaraps/neofetch)
+4. [GitHub CLI](https://github.com/cli/cli)
+5. [Node.js](https://nodejs.org/en/)
+6. [z (cd history)](https://github.com/rupa/z): Place the `/z-master/` directory in `/home/[username]/`.
+7. [exa (modernized ls)](https://github.com/ogham/exa)
+8. A [Nerd Font](https://www.nerdfonts.com/font-downloads) (I prefer "Caskaydia Cove")
+
+Then, clone this repo into the user's home (`~`) directory:
+
+```
+gh repo clone dukeofjukes/dotfiles
+# or use SSH or HTTPS
+```
+
+Run this script to link all dotfiles to this repo:
+
+```
+. ~/dotfiles/macos/linkfiles.sh
+```
+
 ## TODO:
 
 - Find a way to share .gitconfig without the user.name and user.email, if my git configs end up getting more complex.
-- Write a bootstrapper script for Windows and Linux that installs all necessary packages (through homebrew, etc).
-- Add section for macOS (once I get a macbook).
+- Write a bootstrapper script for Windows, Linux, and macOS that installs all necessary packages (through homebrew, etc).
+  - I know this is possible on macOS through a Brewfile with brew casks, etc.
