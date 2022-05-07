@@ -1,6 +1,6 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
+
+# Hush default login greeting
+set -U fish_greeting ""
 
 # Init oh-my-posh
 oh-my-posh init fish --config ~/dotfiles/burtchell.simple.omp.json | source

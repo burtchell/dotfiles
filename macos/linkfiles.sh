@@ -11,3 +11,4 @@ ln -sf ~/dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
 
 # etc
 ln -sf ~/dotfiles/.config/neofetch/config.conf ~/.config/neofetch/config.conf
+ln -sf ~/dotfiles/macos/.hushlogin ~/.hushlogin
