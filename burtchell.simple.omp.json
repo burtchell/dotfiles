@@ -36,7 +36,7 @@
             "fetch_upstream_icon": true,
             "branch_icon": ""
           },
-          "template": " <p:white>on</> {{ .HEAD }} {{ if .Working.Added }}[+{{.Working.Added}}] {{ end }}{{ if .Working.Deleted }}[-{{.Working.Deleted}}] {{ end }}{{ if .Working.Modified }}[~{{.Working.Modified}}] {{ end }}"
+          "template": " <p:white>on</> {{ if .UpstreamURL }}{{ url .HEAD .UpstreamURL }}{{ else }}{{ .HEAD }}{{ end }} {{ if .Working.Added }}[+{{.Working.Added}}] {{ end }}{{ if .Working.Deleted }}[-{{.Working.Deleted}}] {{ end }}{{ if .Working.Modified }}[~{{.Working.Modified}}] {{ end }}"
         }
       ],
       "type": "prompt"
