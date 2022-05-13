@@ -1,15 +1,15 @@
-# Init oh-my-posh
+# init oh-my-posh
 oh-my-posh init pwsh --config ~/dotfiles/burtchell.simple.omp.json | Invoke-Expression
 
-# Import terminal icons
+# import terminal icons
 Import-Module -Name Terminal-Icons
 
-# Set PSReadLine preferences
+# set PSReadLine preferences
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -BellStyle None
 Set-PSReadLineOption -PredictionSource History
 
-# Git aliases
+# git aliases
 Set-Alias -Name 'g' -Value 'git' -Scope Global
 function global:GitStatus() { & git status $args }
 Set-Alias -Name 'gs' -Value 'GitStatus' -Scope Global
@@ -26,13 +26,22 @@ function global:GitPush() { & git push $args }
 Remove-Item 'Alias:\gp' -Force # override an alias for Get-ItemProperty cmdlet
 Set-Alias -Name 'gp' -Value 'GitPush' -Scope Global
 
-# More Aliases
 function global:ReloadPowerShell() { & $PROFILE }
-Set-Alias -Name 'reload' -Value 'ReloadPowerShell'
+Set-Alias -Name 'reload' -Value 'ReloadPowerShell' -Scope Global
+
+# open windows explorer
 Set-Alias -Name 'exp' -Value 'explorer' -Scope Global
+Set-Alias -Name 'open' -Value 'explorer' -Scope Global
+
 Set-Alias -Name 'grep' -Value 'findstr' -Scope Global
+
+# ls variations (for consistency with linux muscle-memory)
 Set-Alias -Name 'ls' -Value 'dir' -Scope Global
 Set-Alias -Name 'll' -Value 'dir' -Scope Global
 function global:ListTreeFiles() { & tree /F /a $args }
 Set-Alias -Name 'lt' -Value 'ListTreeFiles' -Scope Global
 Set-Alias -Name 'la' -Value 'dir' -Scope Global
+
+# jekyll site local launch with live reload
+function global:JekyllExec() { & bundle exec jekyll serve --livereload $args }
+Set-Alias -Name 'exek' -Value 'JekyllExec' -Scope Global
