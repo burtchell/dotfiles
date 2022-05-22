@@ -29,9 +29,9 @@ The Windows Terminal [`settings.json`](https://github.com/dukeofjukes/configs/bl
 
 Afterwards, all Windows configuration should be applied. Next, we'll do the same to the WSL.
 
-## Linux (WSL)
+## Linux (Ubuntu-based distros and WSL)
 
-Run `wsl --install -d Ubuntu` to install the Ubuntu subsystem. To ensure WSL2 was used, run `wsl -l -v` and check the version number. If not version 2, see [how to upgrade](https://docs.microsoft.com/en-us/windows/wsl/install#upgrade-version-from-wsl-1-to-wsl-2).
+If using WSL, run `wsl --install -d Ubuntu` to install the Ubuntu subsystem. To ensure WSL2 was used, run `wsl -l -v` and check the version number. If not version 2, see [how to upgrade](https://docs.microsoft.com/en-us/windows/wsl/install#upgrade-version-from-wsl-1-to-wsl-2).
 
 Install [homebrew](https://brew.sh):
 
@@ -39,27 +39,46 @@ Install [homebrew](https://brew.sh):
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-After a reload, install the following packages with homebrew:
+After a terminal reload, install the following packages with homebrew:
 
 ```
-brew install oh-my-posh neofetch gh exa
+brew install oh-my-posh neofetch gh exa fish fisher
 ```
 
 1. [oh-my-posh](https://ohmyposh.dev/)
 1. [neofetch](https://github.com/dylanaraps/neofetch)
 1. [GitHub CLI](https://github.com/cli/cli)
 1. [exa (modernized ls)](https://github.com/ogham/exa) (as of 2021/04/27: install using macOS homebrew instructions)
+1. [fish](https://fishshell.com)
+1. [fisher](https://github.com/jorgebucaran/fisher)
 
-Install the following without a package manager:
+To set fish as the default shell, add the following line to the top of `/etc/shells`:
 
+```
+/home/linuxbrew/.linuxbrew/bin/fish
+```
+
+Then, run the following commands:
+
+```
+fish
+fish_add_path /home/linuxbrew/.linuxbrew/bin
+chsh -s /home/linuxbrew/.linuxbrew/bin/fish
+```
+
+If fish isn't the default shell after a terminal reload, ensure it is after a full restart. If nothing else works, as a last resort, add `fish` to the end of `.profile`.
+
+Lastly, install the following:
+
+1. For standalone linux installations: install a [Nerd Font](https://www.nerdfonts.com/font-downloads) (I prefer "Caskaydia Cove")
 1. [Node.js](https://nodejs.org/en/) via [WSL instructions](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl)
-1. [z (cd history)](https://github.com/rupa/z): Place the `/z-master/` directory in `/home/[username]/`.
+1. [z (cd history)](https://github.com/jethrokuan/z) using `fisher install jethrokuan/z`
 
 Clone this repo into the user's home (`~`) directory and run the script to link all dotfiles to this repo:
 
 ```
 gh repo clone dukeofjukes/dotfiles
-. ~/dotfiles/linux/linkfiles.sh
+bash ~/dotfiles/linux/linkfiles.sh
 ```
 
 ## macOS

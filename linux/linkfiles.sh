@@ -1,8 +1,56 @@
 #!/bin/bash
 
-# remove and link dotfiles to this repo
-ln -sf ~/dotfiles/linux/.profile ~/.profile
-ln -sf ~/dotfiles/linux/.bashrc ~/.bashrc
-ln -sf ~/dotfiles/linux/.aliases ~/.aliases
-ln -sf ~/dotfiles/linux/.hushlogin ~/.hushlogin
-ln -sf ~/dotfiles/.config/neofetch/config.conf ~/.config/neofetch/config.conf
+backupdir="dotfiles-backups/"
+
+function make_backup() {
+  if [[ -f $1 ]]; then
+    filename=$(basename $1)
+    cp $1 "${backupdir}${filename}"
+  fi
+}
+
+function link() {
+  ln -sf $1 $2
+}
+
+while true; do
+  read -p "Would you like to make backups of preexisting dotfiles? [y/n] " yn
+
+  case $yn in
+    [yY] ) echo Making backups...;
+      cd ~;
+      mkdir -p $backupdir;
+
+      make_backup ~/.profile;
+      make_backup ~/.bashrc;
+      make_backup ~/.aliases;
+      make_backup ~/.config/fish/functions/aliases.fish;
+      make_backup ~/.config/fish/config.fish;
+      make_backup ~/.hushlogin;
+      make_backup ~/.config/neofetch/config.conf;
+
+      echo Done.;
+      echo Backups saved in ~/$backupdir;
+      break;;
+    [nN] ) echo Backups will not be made.;
+      break;;
+    * ) echo Invalid response.;;
+  esac
+done
+
+echo Linking Files...
+
+# bash
+link ~/dotfiles/linux/.profile ~/.profile
+link ~/dotfiles/linux/.bashrc ~/.bashrc
+link ~/dotfiles/linux/.aliases ~/.aliases
+
+# fish
+link ~/dotfiles/.config/fish/functions/aliases.fish ~/.config/fish/functions/aliases.fish
+link ~/dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
+
+# misc
+link ~/dotfiles/linux/.hushlogin ~/.hushlogin
+link ~/dotfiles/.config/neofetch/config.conf ~/.config/neofetch/config.conf
+
+echo Done.
