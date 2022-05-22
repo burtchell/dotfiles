@@ -133,7 +133,6 @@ gh repo clone dukeofjukes/dotfiles
 
 ## TODO:
 
-- Convert linux instructions to use fish
 - Find a way to share .gitconfig without the user.name and user.email, if my git configs end up getting more complex.
 - Write a bootstrapper script for Windows, Linux, and macOS that installs all necessary packages (through homebrew, etc).
   - I know this is possible on macOS through a Brewfile with brew casks, etc.
