@@ -10,3 +10,8 @@ oh-my-posh init fish --config ~/dotfiles/burtchell.simple.omp.json | source
 
 # run neofetch on start
 neofetch
+
+# force arrow key word movement in terminal (gnome terminal interferes)
+bind \e\[1\;5C forward-word
+bind \e\[1\;5D backward-word
+bind \cH backward-kill-word
