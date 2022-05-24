@@ -31,5 +31,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # load oh-my-posh theme
 eval "$(oh-my-posh init bash --config ~/dotfiles/burtchell.simple.omp.json)"
-
-
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
