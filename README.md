@@ -54,7 +54,7 @@ bash ~/dotfiles/linux/install.sh
 
 Reload the terminal to ensure all changes have been made.
 
-Note: If you would prefer to install packages manually rather than running `install.sh`, see [Linux Manual Installation](https://github.com/dukeofjukes/dotfiles/blob/main/linux/README.md)
+Note: If you would prefer to install packages manually rather than running `install.sh`, see [Linux Manual Installation](https://github.com/dukeofjukes/dotfiles/blob/main/linux/README.md).
 
 ## TODO:
 
