@@ -14,7 +14,6 @@ Install the following programs/packages on Windows:
 6. [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
 7. [PSReadLine](https://github.com/PowerShell/PSReadLine): Run `Install-Module PSReadLine -AllowPrerelease -Force` in order to get the pre-release version with list-view.
 8. [Git](https://gitforwindows.org/) and [GitHub CLI](https://github.com/cli/cli)
-9. [Node.js](https://nodejs.org/en/)
 10. [z (cd history)](https://www.powershellgallery.com/packages/z/1.1.13)
 11. [neofetch](https://github.com/dylanaraps/neofetch)
 
@@ -47,7 +46,7 @@ After a terminal reload, clone this repo into the home `~` directory.
 git clone https://github.com/dukeofjukes/dotfiles.git
 ```
 
-Run the following command to install packages and create symbolic links to the dotfiles in this repo. Follow the prompts to optionally change the default shell to fish and make backups of preexisting dotfiles (saved in ~/dotfiles-backups):
+Run the following command to install packages and create symbolic links to the dotfiles in this repo. Follow the prompts to optionally change the default shell to fish and make backups of preexisting dotfiles (saved in `~/dotfiles-backups`):
 
 ```
 bash ~/dotfiles/linux/install.sh
