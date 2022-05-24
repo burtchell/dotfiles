@@ -57,56 +57,6 @@ Reload the terminal to ensure all changes have been made.
 
 Note: If you would prefer to install packages manually rather than running `install.sh`, see [Linux Manual Installation](https://github.com/dukeofjukes/dotfiles/blob/main/linux/README.md)
 
-## macOS
-
-Install the following:
-
-1. [iTerm2](https://iterm2.com/)
-1. A [Nerd Font](https://www.nerdfonts.com/font-downloads) (I prefer "Caskaydia Cove")
-1. [homebrew](https://brew.sh)
-1. [fish](https://fishshell.com) using `brew install fish`
-
-To set fish as the default shell, add the following line to the top of `/etc/shells`:
-
-```
-/opt/homebrew/bin/fish
-```
-
-Then, run the following commands:
-
-```
-fish
-fish_add_path /opt/homebrew/bin
-chsh -s /opt/homebrew/bin/fish
-```
-
-After a reload, iTerm2 should default to fish. Now, install the following packages with homebrew:
-
-```
-brew install oh-my-posh neofetch gh exa fisher
-```
-
-1. [oh-my-posh](https://ohmyposh.dev/)
-1. [neofetch](https://github.com/dylanaraps/neofetch)
-1. [GitHub CLI](https://github.com/cli/cli)
-1. [exa (modernized ls)](https://github.com/ogham/exa)
-1. [fisher](https://github.com/jorgebucaran/fisher)
-
-And install the following with fisher:
-
-1. [z (cd history)](https://github.com/jethrokuan/z) using `fisher install jethrokuan/z`
-
-Lastly, install the following without a package manager:
-
-1. [Node.js](https://nodejs.org/en/)
-
-Clone this repo into the user's home (`~`) directory and run the script to link all dotfiles to this repo:
-
-```
-gh repo clone dukeofjukes/dotfiles
-. ~/dotfiles/macos/linkfiles.sh
-```
-
 ## TODO:
 
 - Find a way to share .gitconfig without the user.name and user.email, if my git configs end up getting more complex.
