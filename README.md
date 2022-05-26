@@ -54,9 +54,11 @@ bash ~/dotfiles/linux/install.sh
 
 Reload the terminal to ensure all changes have been made.
 
+If you have any extra commands and configurations that need to be loaded without forking/pushing to this repo, put them in `~/.extra`. This file will be untracked and can be used to add anything private (i.e. git name and email).
+
 Note: If you would prefer to install packages manually rather than running `install.sh`, see [Linux Manual Installation](https://github.com/dukeofjukes/dotfiles/blob/main/linux/README.md).
 
 ## TODO:
 
-- Find a way to share .gitconfig without the user.name and user.email, if my git configs end up getting more complex.
+- Create seperate aliases file for windows, source .extra in windows.
 - Write a bootstrapper installation script for Windows
