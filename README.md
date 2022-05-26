@@ -63,3 +63,8 @@ Note: If you would prefer to install packages manually rather than running `inst
 - Reorganize file structure.
 - Create seperate aliases file for windows, source .extra in windows.
 - Write a bootstrapper installation script for Windows
+
+## Thanks to
+
+- [Mathias Bynens](https://github.com/mathiasbynens) and their [dotfiles repository](https://github.com/mathiasbynens/dotfiles), which inspired my oh-my-posh theme and use of `.extra`.
+- [Fireship](https://www.youtube.com/c/Fireship) and their [dotfiles tutorial](https://www.youtube.com/watch?v=r_MpUP6aKiQ), which showed me how to utilize symbolic links.
