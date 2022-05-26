@@ -24,7 +24,7 @@ gh repo clone dukeofjukes/dotfiles
 . ~/dotfiles/windows/linkfiles.ps1
 ```
 
-The Windows Terminal [`settings.json`](https://github.com/dukeofjukes/configs/blob/main/Windows/terminal.settings.json) contains terminal configs. Copy the components of this file you want and paste them wherever Windows installs Terminal (Warning: blindly replacing your terminal settings file can cause lots of bugs, particularly when it searches the provided filepaths for shells). At the very least, I recommend adding -nologo to the PowerShell command line in Windows Terminal.
+The Windows Terminal [`settings.json`](https://github.com/dukeofjukes/configs/blob/main/Windows/terminal.settings.json) contains terminal configs. Copy the components of this file you want and paste them wherever Windows installs Terminal (Warning: blindly replacing your terminal settings file can cause lots of bugs, particularly when it searches the provided filepaths for shells). At the very least, I recommend adding `-nologo` to the PowerShell command line in Windows Terminal.
 
 Afterwards, all Windows configuration should be applied. Follow the next section if using WSL.
 
