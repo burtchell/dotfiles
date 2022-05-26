@@ -1,7 +1,7 @@
 # this file sets fish as the default shell, to be called in install.sh
 
 # add fish to shells
-echo /home/linux/.linuxbrew/bin/fish | sudo tee -a /etc/shells;
+echo /home/linuxbrew/.linuxbrew/bin/fish | sudo tee -a /etc/shells;
 
 # add homebrew to fish path
 fish_add_path /home/linuxbrew/.linuxbrew/bin;
