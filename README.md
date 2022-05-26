@@ -60,5 +60,6 @@ Note: If you would prefer to install packages manually rather than running `inst
 
 ## TODO:
 
+- Reorganize file structure.
 - Create seperate aliases file for windows, source .extra in windows.
 - Write a bootstrapper installation script for Windows
