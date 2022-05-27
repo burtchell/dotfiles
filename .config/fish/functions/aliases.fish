@@ -2,6 +2,12 @@
 # Allow aliases to be sudo'ed
 alias sudo="sudo "
 
+# If on WSL, add explorer alias
+if type -q explorer.exe
+  alias exp="explorer.exe"
+  alias open="explorer.exe"
+end
+
 # Reload the shell
 alias reload="exec $SHELL -l"
 
