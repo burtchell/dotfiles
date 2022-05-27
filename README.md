@@ -2,6 +2,8 @@
 
 This repository contains my personal terminal/shell/prompt configuration files in order to make environment customization easier on multiple machines.
 
+![screenshot](./screenshot.png)
+
 ## Windows
 
 Install the following programs/packages on Windows:
@@ -14,8 +16,8 @@ Install the following programs/packages on Windows:
 6. [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
 7. [PSReadLine](https://github.com/PowerShell/PSReadLine): Run `Install-Module PSReadLine -AllowPrerelease -Force` in order to get the pre-release version with list-view.
 8. [Git](https://gitforwindows.org/) and [GitHub CLI](https://github.com/cli/cli)
-10. [z (cd history)](https://www.powershellgallery.com/packages/z/1.1.13)
-11. [neofetch](https://github.com/dylanaraps/neofetch)
+9. [z (cd history)](https://www.powershellgallery.com/packages/z/1.1.13)
+10. [neofetch](https://github.com/dylanaraps/neofetch)
 
 Clone this repo into the user's home (`~`) directory and run the script to link all dotfiles to this repo:
 
