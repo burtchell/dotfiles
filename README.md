@@ -28,6 +28,8 @@ gh repo clone dukeofjukes/dotfiles
 
 The Windows Terminal [`settings.json`](https://github.com/dukeofjukes/configs/blob/main/Windows/terminal.settings.json) contains terminal configs. Copy the components of this file you want and paste them wherever Windows installs Terminal (Warning: blindly replacing your terminal settings file can cause lots of bugs, particularly when it searches the provided filepaths for shells). At the very least, I recommend adding `-nologo` to the PowerShell command line in Windows Terminal.
 
+If you have any extra commands and configurations that need to be loaded without forking/pushing to this repo, put them in `~/extra.ps1`. This file will be untracked and can be used to add anything private (i.e. git name and email).
+
 Afterwards, all Windows configuration should be applied. Follow the next section if using WSL.
 
 ## Linux (Ubuntu-based)
@@ -63,7 +65,6 @@ Note: If you would prefer to install packages manually rather than running `inst
 ## TODO:
 
 - Reorganize file structure.
-- Create seperate aliases file for windows, source .extra in windows.
 - Write a bootstrapper installation script for Windows
 
 ## Thanks to
