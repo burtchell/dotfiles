@@ -1,6 +1,10 @@
 # This file contains all aliases, and will be sourced in the default PowerShell profile 
 # (~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1).
 
+function global:SleepComputer() { rundll32.exe powrprof.dll, SetSuspendState Sleep }
+Set-Alias -Name 'naptime' -Value 'SleepComputer' -Scope Global
+Set-Alias -Name 'goodnight' -Value 'SleepComputer' -Scope Global
+
 # git aliases
 Set-Alias -Name 'g' -Value 'git' -Scope Global
 function global:GitStatus() { & git status $args }
