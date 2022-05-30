@@ -2,7 +2,9 @@
 
 This repository contains my personal terminal/shell/prompt configuration files in order to make environment customization easier on multiple machines.
 
-![screenshot](./screenshot.png)
+<p align="center">
+  <img src="./screenshot.png" alt="screenshot" />
+</p>
 
 ## Windows
 
