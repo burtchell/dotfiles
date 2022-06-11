@@ -28,7 +28,7 @@ alias gp="git push"
 # Repace ls with exa
 alias ls="exa --icons --group-directories-first"
 alias ll="exa -l --icons --group-directories-first --no-permissions"
-alias lt="exa -T --icons --group-directories-first --level=3"
+alias lt="exa -T --icons --group-directories-first --level=3 --git-ignore"
 alias la="exa -la --icons --group-directories-first --no-permissions"
 
 # Always enable colored grep output
