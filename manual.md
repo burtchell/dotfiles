@@ -3,7 +3,7 @@
 Install the following packages with homebrew:
 
 ```
-brew install oh-my-posh neofetch gh exa fish fisher
+brew install oh-my-posh neofetch gh exa fish fisher neovim
 ```
 
 1. [oh-my-posh](https://ohmyposh.dev/)
@@ -12,6 +12,7 @@ brew install oh-my-posh neofetch gh exa fish fisher
 1. [exa (modernized ls)](https://github.com/ogham/exa) (as of 2021/04/27: install using macOS homebrew instructions)
 1. [fish](https://fishshell.com)
 1. [fisher](https://github.com/jorgebucaran/fisher)
+1. [neovim](https://neovim.io)
 
 To set fish as the default shell, run the following commands
 
