@@ -26,7 +26,8 @@ alias gc="git commit -m"
 alias gp="git push"
 
 # Vim alias
-alias vi="vim"
+alias vi="nvim"
+alias vim="nvim"
 
 # Repace ls with exa
 alias ls="exa --icons --group-directories-first"

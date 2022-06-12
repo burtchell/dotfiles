@@ -32,8 +32,9 @@ alias ll="exa -l --icons --group-directories-first --no-permissions"
 alias lt="exa -T --icons --group-directories-first --level=3 --git-ignore"
 alias la="exa -la --icons --group-directories-first --no-permissions"
 
-# vim alias
-alias vi="vim"
+# nvim alias
+alias vi="nvim"
+alias vim="nvim"
 
 # Always enable colored grep output
 alias grep='grep --color=auto'
