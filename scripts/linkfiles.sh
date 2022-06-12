@@ -21,9 +21,6 @@ while true; do
       cd ~;
       mkdir -p $backupdir;
 
-      make_backup ~/.profile;
-      make_backup ~/.bashrc;
-      make_backup ~/.aliases;
       make_backup ~/.config/fish/functions/aliases.fish;
       make_backup ~/.config/fish/config.fish;
       make_backup ~/.hushlogin;
@@ -40,17 +37,12 @@ done
 
 echo Linking Files...
 
-# bash
-link ~/dotfiles/linux/.profile ~/.profile
-link ~/dotfiles/linux/.bashrc ~/.bashrc
-link ~/dotfiles/linux/.aliases ~/.aliases
-
 # fish
 link ~/dotfiles/.config/fish/functions/aliases.fish ~/.config/fish/functions/aliases.fish
 link ~/dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
 
 # misc
-link ~/dotfiles/linux/.hushlogin ~/.hushlogin
+link ~/dotfiles/hushlogin ~/.hushlogin
 
 # copy neofetch config instead of linking, so the user can manually configure per system w/o being tracked by git
 if [[ -e ~/.config/neofetch/config.conf ]]; then

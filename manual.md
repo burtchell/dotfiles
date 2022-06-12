@@ -1,4 +1,4 @@
-## Linux (manual installation)
+## Manual Installation
 
 Install the following packages with homebrew:
 
@@ -16,7 +16,7 @@ brew install oh-my-posh neofetch gh exa fish fisher
 To set fish as the default shell, run the following commands
 
 ```
-echo /home/linux/.linuxbrew/bin/fish | sudo tee -a /etc/shells;
+echo /home/linuxbrew/.linuxbrew/bin/fish | sudo tee -a /etc/shells;
 fish
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 chsh -s /home/linuxbrew/.linuxbrew/bin/fish
@@ -33,5 +33,5 @@ fisher install jethrokuan/z
 Run the following command to create symbolic links to the dotfiles in this repo. Follow the prompts to optionally make backups of preexisting dotfiles (saved in ~/dotfiles-backups):
 
 ```
-bash ~/dotfiles/linux/linkfiles.sh
+bash ~/dotfiles/linkfiles.sh
 ```
