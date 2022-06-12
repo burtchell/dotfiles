@@ -36,4 +36,15 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" color theming
 colorscheme nord
+set cursorline
+
+" Ignore case of searches
+set ignorecase
+
+" Enable mouse in all modes
+set mouse=a
+
+" Offset to keep cursor from edges of screen
+set scrolloff=6
