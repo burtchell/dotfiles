@@ -42,7 +42,7 @@ link ~/dotfiles/.config/fish/functions/aliases.fish ~/.config/fish/functions/ali
 link ~/dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
 
 # misc
-link ~/dotfiles/hushlogin ~/.hushlogin
+link ~/dotfiles/.hushlogin ~/.hushlogin
 
 # copy neofetch config instead of linking, so the user can manually configure per system w/o being tracked by git
 if [[ -e ~/.config/neofetch/config.conf ]]; then

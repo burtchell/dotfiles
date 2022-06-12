@@ -33,5 +33,5 @@ fisher install jethrokuan/z
 Run the following command to create symbolic links to the dotfiles in this repo. Follow the prompts to optionally make backups of preexisting dotfiles (saved in ~/dotfiles-backups):
 
 ```
-bash ~/dotfiles/linkfiles.sh
+bash ~/dotfiles/scripts/linkfiles.sh
 ```

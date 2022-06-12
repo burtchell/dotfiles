@@ -19,7 +19,7 @@ git clone https://github.com/dukeofjukes/dotfiles.git
 Run the following script to install packages, link to this repo, and set fish as the default shell. Follow the prompts to optionally create backups of preexisting dotfiles (saved in `~/dotfiles-backups/`):
 
 ```
-bash ~/dotfiles/install.sh
+bash ~/dotfiles/scripts/install.sh
 ```
 
 Reload the terminal to ensure all changes have been made.
