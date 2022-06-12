@@ -21,6 +21,9 @@ while true; do
       cd ~;
       mkdir -p $backupdir;
 
+      make_backup ~/.profile
+      make_backup ~/.bashrc
+      make_backup ~/.aliases
       make_backup ~/.config/fish/functions/aliases.fish;
       make_backup ~/.config/fish/config.fish;
       make_backup ~/.hushlogin;
@@ -36,6 +39,11 @@ while true; do
 done
 
 echo Linking Files...
+
+# bash
+link ~/dotfiles/.profile ~/.profile
+link ~/dotfiles/.bashrc ~/.bashrc
+link ~/dotfiles/.bash_aliases ~/.bash_aliases
 
 # fish
 link ~/dotfiles/.config/fish/functions/aliases.fish ~/.config/fish/functions/aliases.fish

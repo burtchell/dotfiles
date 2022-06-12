@@ -1,21 +1,20 @@
+#!/bin/bash
 
 # Allow aliases to be sudo'ed
 alias sudo="sudo "
 
-# If on WSL, add explorer alias
-if type -q explorer.exe
-  alias exp="explorer.exe"
-  alias open="explorer.exe"
-end
+# Open windows explorer (WSL only, comment out if using this file on standalone linux)
+alias exp="explorer.exe"
 
 # Reload the shell
-alias reload="exec $SHELL -l"
+alias reload="exec ${SHELL} -l"
 
 # Easier navigation: .., ..., ...., ....., and -
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+alias -- -="cd -"
 
 # Git shortcuts
 alias g="git"
@@ -26,14 +25,14 @@ alias gaa="git add -A"
 alias gc="git commit -m"
 alias gp="git push"
 
+# Vim alias
+alias vi="vim"
+
 # Repace ls with exa
 alias ls="exa --icons --group-directories-first"
 alias ll="exa -l --icons --group-directories-first --no-permissions"
-alias lt="exa -T --icons --group-directories-first --level=3 --git-ignore"
+alias lt="exa -T --icons --group-directories-first --level=3"
 alias la="exa -la --icons --group-directories-first --no-permissions"
-
-# vim alias
-alias vi="vim"
 
 # Always enable colored grep output
 alias grep='grep --color=auto'

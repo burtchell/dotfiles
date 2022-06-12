@@ -16,7 +16,7 @@ After a terminal reload, clone this repo into the home `~` directory.
 git clone https://github.com/dukeofjukes/dotfiles.git
 ```
 
-Run the following script to install packages, link to this repo, and set fish as the default shell. Follow the prompts to optionally create backups of preexisting dotfiles (saved in `~/dotfiles-backups/`):
+Run the following script to install packages, link to this repo, and set fish as the default shell (you may be prompted for a sudo password). Follow the prompts to optionally create backups of preexisting dotfiles (saved in `~/dotfiles-backups/`):
 
 ```
 bash ~/dotfiles/scripts/install.sh
