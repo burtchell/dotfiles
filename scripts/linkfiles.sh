@@ -23,7 +23,7 @@ while true; do
 
       make_backup ~/.profile;
       make_backup ~/.bashrc;
-      make_backup ~/.aliases;
+      make_backup ~/.bash_aliases;
       make_backup ~/.config/alacritty/alacritty.yml;
       make_backup ~/.config/nvim/init.vim;
       make_backup ~/.config/nvim/coc-settings.json;
@@ -31,6 +31,7 @@ while true; do
       make_backup ~/.config/fish/config.fish;
       make_backup ~/.hushlogin;
       make_backup ~/.config/neofetch/config.conf;
+      make_backup ~/.gitignore;
 
       echo Done.;
       echo Backups saved in ~/$backupdir;
@@ -61,6 +62,7 @@ link ~/dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
 
 # misc
 link ~/dotfiles/.hushlogin ~/.hushlogin
+link ~/dotfiles/.gitignore ~/.gitignore
 
 # copy neofetch config instead of linking, so the user can manually configure per system w/o being tracked by git
 if [[ -e ~/.config/neofetch/config.conf ]]; then
