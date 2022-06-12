@@ -1,3 +1,10 @@
+" Initialization and configuration for nvim
+" Plugins and keymaps are imported.
+
+" Imports
+runtime ./plug.vim
+runtime ./keymaps.vim
+
 " Set compatablity to Vim only
 set nocompatible
 
@@ -24,40 +31,6 @@ set ignorecase
 
 " Offset to keep cursor from edges of screen
 set scrolloff=6
-
-" Add plugins, and run :PlugInstall to apply changes
-packloadall
-call plug#begin()
-
-" Airline status bar
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" Nord theme
-Plug 'shaunsingh/nord.nvim'
-
-" Conquer of Completion - VSCode autocomplete and other features
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Prettier plugin
-" Note: need to globally install Prettier (via npm) for plugin to take effect
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install --frozen-lockfile --production',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
-
-" Git gutter next to line numbers
-Plug 'airblade/vim-gitgutter'
-
-" Nerd Tree stuff
-Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
-" VSCode-like commenting keyboard shortcut
-Plug 'scrooloose/nerdcommenter'
-
-call plug#end()
 
 " Nord theme, set cursor line afterwards
 colorscheme nord
@@ -98,19 +71,3 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',
                 \ }
-" ctrl-n to show tree
-nmap <C-n> :NERDTreeToggle<CR>
-
-" j/k move through virtual lines (wrapping lines)
-noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
-noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
-" Navigate windows (like between tree and editor panel) with Ctrl-[hjkl]
-noremap <C-j> <C-W>j
-noremap <C-K> <C-W>k
-noremap <C-H> <C-W>h
-noremap <C-L> <C-W>l
-
-" TODO: figure out how to map toggle comment to C-/
-"nmap <C-/> <plug>NerdCommenterToggle
-"vmap <C-/> <plug>NerdCommenterToggle

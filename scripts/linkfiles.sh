@@ -26,6 +26,8 @@ while true; do
       make_backup ~/.bash_aliases;
       make_backup ~/.config/alacritty/alacritty.yml;
       make_backup ~/.config/nvim/init.vim;
+      make_backup ~/.config/nvim/plug.vim;
+      make_backup ~/.config/nvim/keymaps.vim;
       make_backup ~/.config/nvim/coc-settings.json;
       make_backup ~/.config/fish/functions/aliases.fish;
       make_backup ~/.config/fish/config.fish;
@@ -54,6 +56,8 @@ link ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.ym
 
 # nvim
 link ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
+link ~/dotfiles/.config/nvim/plug.vim ~/.config/nvim/plug.vim
+link ~/dotfiles/.config/nvim/keymaps.vim ~/.config/nvim/keymaps.vim
 link ~/dotfiles/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 
 # fish
