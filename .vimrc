@@ -1,9 +1,14 @@
 packloadall
 
 " Plugins start here
+" Add plugins, and run :PlugInstall to apply changes
 call plug#begin()
 
+" Nord theme
+Plug 'arcticicestudio/nord-vim'
+
 " Prettier plugin
+" Note: need to globally install Prettier (via npm) for plugin to take effect
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --frozen-lockfile --production',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
@@ -26,6 +31,9 @@ set relativenumber
 " Status bar
 set laststatus=2
 
+" 2 space tabs
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+colorscheme nord
