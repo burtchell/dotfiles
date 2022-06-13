@@ -13,6 +13,10 @@ noremap <C-K> <C-W>k
 noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 
+" Emmet-vim
+let g:user_emmet_mode='n' " Normal mode only
+let g:user_emmet_leader_key=',' " ,, to apply emmet
+
 " TODO: figure out how to map toggle comment to C-/
 "nmap <C-/> <plug>NerdCommenterToggle
 "vmap <C-/> <plug>NerdCommenterToggle

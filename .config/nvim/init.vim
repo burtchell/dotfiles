@@ -8,7 +8,7 @@ runtime ./keymaps.vim
 " Set compatablity to Vim only
 set nocompatible
 
-set wrap
+" set wrap
 set encoding=utf-8
 set mouse=a
 

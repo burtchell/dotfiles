@@ -12,6 +12,12 @@ Plug 'shaunsingh/nord.nvim'
 " Conquer of Completion - VSCode autocomplete and other features
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" HTML Emmet in vim
+Plug 'mattn/emmet-vim'
+
+" surround - nice way to add brackets, quotes, etc. using 's'
+Plug 'tpope/vim-surround'
+
 " Prettier plugin
 " Note: need to globally install Prettier (via npm) for plugin to take effect
 Plug 'prettier/vim-prettier', {
@@ -27,7 +33,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" VSCode-like commenting keyboard shortcut
-Plug 'scrooloose/nerdcommenter'
+" Easier way to comment stuff out - 'gcc' comments, 'gcgc' uncomments
+Plug 'tpope/vim-commentary'
 
 call plug#end()
