@@ -1,5 +1,8 @@
 " Keymaps
 
+" Leave insert mode with two semicolons
+:imap ;; <Esc>
+
 " ctrl-n to show tree
 nmap <C-n> :NERDTreeToggle<CR>
 

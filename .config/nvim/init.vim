@@ -46,13 +46,20 @@ let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.colnr = ' ' 
 
 " CoC config
+" run ':CocInstall coc-snippets coc-pairs ...etc...' to initialize
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
   \ 'coc-prettier', 
+  \ 'coc-tsserver',
+  \ 'coc-eslint',
   \ 'coc-json', 
   \ 'coc-html',
-  \ 'coc-css'
+  \ 'coc-htmlhint',
+  \ 'coc-emmet',
+  \ 'coc-css',
+  \ 'coc-html-css-support',
+  \ 'coc-yaml',
   \ ]
 
 " Prettier config
@@ -65,14 +72,14 @@ let g:prettier#autoformat = 1
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeIgnore = ['^node_modules$']
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'~',
-                \ 'Staged'    :'✚',
-                \ 'Untracked' :'✭',
-                \ 'Renamed'   :'➜',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'~',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
-                \ 'Unknown'   :'?',
-                \ }
+  \ 'Modified'  :'~',
+  \ 'Staged'    :'✚',
+  \ 'Untracked' :'✭',
+  \ 'Renamed'   :'➜',
+  \ 'Unmerged'  :'═',
+  \ 'Deleted'   :'✖',
+  \ 'Dirty'     :'~',
+  \ 'Ignored'   :'☒',
+  \ 'Clean'     :'✔︎',
+  \ 'Unknown'   :'?',
+  \ }
