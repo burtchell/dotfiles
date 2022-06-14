@@ -6,12 +6,6 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Nord theme
-Plug 'shaunsingh/nord.nvim'
-
-" Conquer of Completion - VSCode autocomplete and other features
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " HTML Emmet in vim
 Plug 'mattn/emmet-vim'
 
@@ -40,6 +34,12 @@ if has("nvim")
   Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  
+  " Nord theme
+  Plug 'shaunsingh/nord.nvim'
+
+  " Conquer of Completion - VSCode autocomplete and other features
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
 call plug#end()
