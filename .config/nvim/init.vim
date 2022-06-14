@@ -1,42 +1,56 @@
 " Initialization and configuration for nvim
 " Plugins and keymaps are imported.
 
-" Imports
+" Imports -----------------------------------------------------------
 runtime ./plug.vim
 runtime ./keymaps.vim
+
+" Vanilla Vim configs -----------------------------------------------
 
 " Set compatablity to Vim only
 set nocompatible
 
-" set wrap
-set encoding=utf-8
-set mouse=a
-
-" Set current/relative numbers
-set number
-set relativenumber
-
-" Status bar
-set laststatus=2
-
-" 2 space tabs
-set smarttab
-set cindent
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
-" Ignore case of searches
-set ignorecase
-
-" Offset to keep cursor from edges of screen
-set scrolloff=6
+" Source local .vimrc when running 'nvim .'
+set exrc
+set secure
 
 " Nord theme, set cursor line afterwards
 colorscheme nord
 set cursorline
 
-" Airline config
+" Misc.
+set nowrap
+augroup Markdown
+  autocmd!
+  autocmd FileType markdown set wrap
+augroup END
+set encoding=utf-8
+set mouse=a
+set noerrorbells
+set colorcolumn=80
+set signcolumn=yes
+
+" Line numbers
+set number
+set relativenumber
+
+" Default 2 space tabs
+set smarttab
+set cindent
+set tabstop=2 softtabstop=2
+set shiftwidth=2
+set expandtab
+
+" Better case sensitivity for searches
+set ignorecase
+set smartcase
+
+" Offset to keep cursor from edges of screen
+set scrolloff=8
+
+" Plugin configs -----------------------------------------------------
+
+" Airline
 let g:airline_theme='nord_minimal'
 let g:airline#extensions#whitespace#enabled = 0 
 if !exists('g:airline_symbols')
@@ -45,8 +59,7 @@ endif
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.colnr = ' ' 
 
-" CoC config
-" run ':CocInstall coc-snippets coc-pairs ...etc...' to initialize
+" CoC
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
@@ -62,14 +75,13 @@ let g:coc_global_extensions = [
   \ 'coc-yaml',
   \ ]
 
-" Prettier config
-" prettier command for coc
+" Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-" run prettier on save
 let g:prettier#autoformat = 1
 
-" Nerd tree config
+" NERDTree
 let g:NERDTreeWinPos = "right"
+let NERDTreeShowHidden = 1
 let g:NERDTreeIgnore = ['^node_modules$']
 let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ 'Modified'  :'~',

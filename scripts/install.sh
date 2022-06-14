@@ -9,7 +9,7 @@ test $? -eq 0 || exit 1 "You should have sudo privilege to run this script."
 cd ~
 
 echo Installing brew packages...;
-brew install oh-my-posh neofetch gh exa fish fisher neovim;
+brew install oh-my-posh neofetch gh exa fish fisher neovim ripgrep;
 
 echo Setting fish as default shell...;
 fish ./dotfiles/scripts/setdefault.fish;

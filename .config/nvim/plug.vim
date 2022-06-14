@@ -36,4 +36,10 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Easier way to comment stuff out - 'gcc' comments, 'gcgc' uncomments
 Plug 'tpope/vim-commentary'
 
+if has("nvim")
+  Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+endif
+
 call plug#end()
