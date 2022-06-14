@@ -13,7 +13,7 @@ noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 
 " ctrl-p telescope
-nnoremap <C-p> <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <C-p> :lua require'telescope.builtin'.find_files{ hidden = true }<cr>
 
 " ctrl-n to show tree
 nmap <C-n> :NERDTreeToggle<CR>
