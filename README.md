@@ -24,7 +24,17 @@ bash ~/dotfiles/scripts/install.sh
 
 Reload the terminal to ensure all changes have been made.
 
-If you have any extra commands and configurations that need to be loaded without forking/pushing to this repo, put them in `~/.extra`. This file will be untracked and can be used to add anything private (i.e. git name and email).
+If you have any extra commands and configurations that need to be loaded without forking/pushing to this repo, put them in `~/.extra`. This file will be untracked and can be used to add anything private. Here's what mine looks like:
+
+```
+GIT_AUTHOR_NAME="Brandon Burtchell"
+git config --global user.name "$GIT_AUTHOR_NAME"
+
+GIT_AUTHOR_EMAIL="62345978+dukeofjukes@users.noreply.github.com"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+git config --global core.editor nvim
+```
 
 Note: If you would prefer to install packages manually or something goes wrong with `install.sh`, see [Linux Manual Installation](https://github.com/dukeofjukes/dotfiles/blob/main/manual.md).
 
