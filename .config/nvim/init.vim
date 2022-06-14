@@ -15,6 +15,7 @@ set exrc
 set secure
 
 " Nord theme, set cursor line afterwards
+set termguicolors
 colorscheme nord
 set cursorline
 
@@ -95,3 +96,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ 'Clean'     :'✔︎',
   \ 'Unknown'   :'?',
   \ }
+
+" colorizer.lua
+lua << EOF
+require'colorizer'.setup()
+EOF

@@ -40,6 +40,9 @@ if has("nvim")
 
   " Conquer of Completion - VSCode autocomplete and other features
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  
+  " Note: requires :set termguicolors in init.vim
+  Plug 'norcalli/nvim-colorizer.lua'
 endif
 
 call plug#end()
