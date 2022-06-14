@@ -1,5 +1,6 @@
 " Initialization and configuration for nvim
-" Plugins and keymaps are imported.
+" Plugins and keymaps are imported in the following section.
+" Any files in ~/.congig/nvim/after/ will be sourced after this file.
 
 " Imports -----------------------------------------------------------
 runtime ./plug.vim
@@ -14,17 +15,13 @@ set nocompatible
 set exrc
 set secure
 
-" Nord theme, set cursor line afterwards
+" Color scheme, draw cursor line according to theme afterwards
 set termguicolors
 colorscheme nord
 set cursorline
 
 " Misc.
 set nowrap
-augroup Markdown
-  autocmd!
-  autocmd FileType markdown set wrap
-augroup END
 set encoding=utf-8
 set mouse=a
 set noerrorbells
@@ -50,6 +47,7 @@ set smartcase
 set scrolloff=8
 
 " Plugin configs -----------------------------------------------------
+" TODO: put all of these files in their own ./after/plugin/[pluginname].rc.vim
 
 " Airline
 let g:airline_theme='nord_minimal'

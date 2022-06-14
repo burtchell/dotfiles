@@ -29,6 +29,8 @@ while true; do
       make_backup ~/.config/nvim/plug.vim;
       make_backup ~/.config/nvim/keymaps.vim;
       make_backup ~/.config/nvim/coc-settings.json;
+      make_backup ~/.config/nvim/after/plugin/telescope.rc.vim
+      make_backup ~/.config/nvim/after/ftplugin/markdown.vim
       make_backup ~/.config/fish/functions/aliases.fish;
       make_backup ~/.config/fish/config.fish;
       make_backup ~/.hushlogin;
@@ -59,6 +61,8 @@ link ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
 link ~/dotfiles/.config/nvim/plug.vim ~/.config/nvim/plug.vim
 link ~/dotfiles/.config/nvim/keymaps.vim ~/.config/nvim/keymaps.vim
 link ~/dotfiles/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
+link ~/dotfiles/.config/nvim/after/plugin/telescope.rc.vim ~/.config/nvim/after/plugin/telescope.rc.vim
+link ~/dotfiles/.config/nvim/after/ftplugin/markdown.vim ~/.config/nvim/after/ftplugin/markdown.vim
 
 # fish
 link ~/dotfiles/.config/fish/functions/aliases.fish ~/.config/fish/functions/aliases.fish
