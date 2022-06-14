@@ -29,3 +29,6 @@ fi
 # add brew programs to path
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
