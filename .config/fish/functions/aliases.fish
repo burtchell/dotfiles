@@ -1,3 +1,4 @@
+# fish shell aliases
 
 # Allow aliases to be sudo'ed
 alias sudo="sudo "
@@ -29,8 +30,8 @@ alias gp="git push"
 # Repace ls with exa
 alias ls="exa --icons --group-directories-first"
 alias ll="exa -l --icons --group-directories-first --no-permissions"
-alias lt="exa -T --icons --group-directories-first --level=3 --git-ignore"
-alias la="exa -la --icons --group-directories-first --no-permissions"
+alias lt="exa -Ta --icons --group-directories-first --level=4 --ignore-glob=\".git|node_modules\""
+alias la="exa -l --all --all --icons --group-directories-first --no-permissions"
 
 # nvim alias
 alias vi="nvim"
