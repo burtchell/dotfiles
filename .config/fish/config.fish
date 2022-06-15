@@ -1,6 +1,8 @@
+# Starting point for fish configs
 
-# Hush default login greeting
-set -U fish_greeting "" 
+function fish_greeting
+  neofetch
+end
 
 # Init oh-my-posh
 oh-my-posh init fish --config ~/dotfiles/burtchell.simple.omp.json | source
