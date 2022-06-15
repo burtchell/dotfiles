@@ -6,6 +6,8 @@ if not status_ok then
   return
 end
 
+vim.api.nvim_set_keymap("n", "<C-p>", ":lua require'telescope.builtin'.find_files()<CR>", { noremap = true, silent = true })
+
 function telescope_buffer_dir()
   return vim.fn.expand('%:p:h')
 end
@@ -22,6 +24,7 @@ telescope.setup {
   },
   pickers = {
     find_files = {
+      theme = "dropdown",
       find_command = { "rg", "--ignore", "-L", "--hidden", "--files" },
     }
   }
