@@ -31,7 +31,7 @@ alias gp="git push"
 alias ls="exa --icons --group-directories-first"
 alias ll="exa -l --icons --group-directories-first --no-permissions"
 alias lt="exa -Ta --icons --group-directories-first --level=4 --ignore-glob=\".git|node_modules\""
-alias la="exa -l --all --all --icons --group-directories-first --no-permissions"
+alias la="exa -l --all --icons --group-directories-first --no-permissions"
 
 # nvim alias
 alias vi="nvim"
