@@ -1,4 +1,5 @@
 -- vanilla nvim options
+-- run :h 'optionname' to check if an option is in vim.o, vim.wo, etc.
 
 local options = {
   backup = false,                          -- creates a backup file

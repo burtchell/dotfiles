@@ -3,5 +3,8 @@
 
 require "options"
 require "keymaps"
-require "plugins"
+require "packer_config"
 require "colorscheme"
+
+-- plugins
+require "plugins.telescope"
