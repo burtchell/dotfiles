@@ -9,3 +9,5 @@ require "colorscheme"
 -- plugins
 require "plugins.telescope"
 require "plugins.nvim-tree"
+require "plugins.cmp"
+require "plugins.gitsigns"
