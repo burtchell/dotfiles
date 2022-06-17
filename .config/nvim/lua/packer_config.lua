@@ -47,13 +47,14 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "lewis6991/impatient.nvim" -- Launch nvim a bit faster
   use "lewis6991/gitsigns.nvim" -- Color lines based on git status
   use "windwp/nvim-autopairs" -- Integrates with cmp, treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "akinsho/bufferline.nvim" -- IDE-like "tabs" for buffers
   use "moll/vim-bbye" -- Delete buffers without accidentally messing up layout
   use "lukas-reineke/indent-blankline.nvim" -- Draw vertical lines in nested indents
-  use "lewis6991/impatient.nvim"
+  use "nvim-lualine/lualine.nvim" -- Status bar replacement
 
   -- Colorschemes
   use "shaunsingh/nord.nvim"
