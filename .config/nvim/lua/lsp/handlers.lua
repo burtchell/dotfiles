@@ -1,3 +1,5 @@
+-- main lsp setup
+
 local M = {}
 
 M.setup = function()

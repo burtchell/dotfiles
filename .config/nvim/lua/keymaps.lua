@@ -1,3 +1,6 @@
+-- vanilla nvim keymaps go here
+-- plugin-specific keymaps will go in their respective files
+
 local opts = { noremap = true, silent = true }
 
 -- shorten function name

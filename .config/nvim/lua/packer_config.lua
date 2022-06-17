@@ -79,6 +79,13 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable built-in lsp
   use "williamboman/nvim-lsp-installer" -- simple lsp installer
+  
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
