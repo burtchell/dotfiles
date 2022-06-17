@@ -47,19 +47,21 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "lewis6991/gitsigns.nvim" -- Color lines based on git status
   use "windwp/nvim-autopairs" -- Integrates with cmp, treesitter
+  use "numToStr/Comment.nvim" -- Easily comment stuff
 
   -- Colorschemes
   use "shaunsingh/nord.nvim"
 
   -- Telescope
-  use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope.nvim" -- Fast fuzzy finder
 
   -- Nvim Tree
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
     },
   }
 
@@ -86,10 +88,7 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use "JoosepAlviste/nvim-ts-context-commentstring"
-
-  -- Git
-  use "lewis6991/gitsigns.nvim"
+  use "JoosepAlviste/nvim-ts-context-commentstring" -- jsx comment support
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
