@@ -50,6 +50,8 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim" -- Color lines based on git status
   use "windwp/nvim-autopairs" -- Integrates with cmp, treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "akinsho/bufferline.nvim" -- IDE-like "tabs" for buffers
+  use "moll/vim-bbye" -- delete buffers without accidentally messing up layout
 
   -- Colorschemes
   use "shaunsingh/nord.nvim"
