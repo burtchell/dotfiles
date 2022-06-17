@@ -6,6 +6,9 @@ require "keymaps"
 require "packer_config"
 require "colorscheme"
 
+-- lsp
+require "lsp"
+
 -- plugins
 require "plugins.telescope"
 require "plugins.nvim-tree"
