@@ -5,6 +5,7 @@ require "options"
 require "keymaps"
 require "packer_config"
 require "colorscheme"
+require "autocommands"
 
 -- run impatient early to speed up nvim launch
 require "plugins.impatient"
