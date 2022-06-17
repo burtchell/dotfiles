@@ -56,6 +56,7 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim" -- Status bar replacement
   use "goolord/alpha-nvim" -- Greeting screen for nvim
   use "akinsho/toggleterm.nvim" -- Popup terminal in nvim
+  use "norcalli/nvim-colorizer.lua" -- Highlight colorcodes (hex, rgb, etc.)
 
   -- Colorschemes
   use "shaunsingh/nord.nvim"
