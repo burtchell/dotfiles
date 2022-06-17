@@ -1,5 +1,4 @@
 -- install plugin manager (packer) and install listed plugins
--- plugin configs will be in their respective files
 
 local fn = vim.fn
 
@@ -88,6 +87,7 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable built-in lsp
   use "williamboman/nvim-lsp-installer" -- simple lsp installer
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   
   -- Treesitter
   use {
