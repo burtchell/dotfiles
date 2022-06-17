@@ -10,7 +10,7 @@ configs.setup {
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "" }, -- List of parsers to ignore installing
   autopairs = {
-    enable = true,
+    enable = true, -- recognize autopairs plugin
   },
   highlight = {
     enable = true, -- false will disable the whole extension
