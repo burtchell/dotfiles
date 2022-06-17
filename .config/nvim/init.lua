@@ -6,6 +6,9 @@ require "keymaps"
 require "packer_config"
 require "colorscheme"
 
+-- run impatient early to speed up nvim launch
+require "plugins.impatient"
+
 -- lsp
 require "lsp"
 
@@ -18,3 +21,4 @@ require "plugins.gitsigns"
 require "plugins.autopairs"
 require "plugins.comment"
 require "plugins.bufferline"
+require "plugins.indent-blankline"

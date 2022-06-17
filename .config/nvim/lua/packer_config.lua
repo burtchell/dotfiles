@@ -51,7 +51,9 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs" -- Integrates with cmp, treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "akinsho/bufferline.nvim" -- IDE-like "tabs" for buffers
-  use "moll/vim-bbye" -- delete buffers without accidentally messing up layout
+  use "moll/vim-bbye" -- Delete buffers without accidentally messing up layout
+  use "lukas-reineke/indent-blankline.nvim" -- Draw vertical lines in nested indents
+  use "lewis6991/impatient.nvim"
 
   -- Colorschemes
   use "shaunsingh/nord.nvim"
