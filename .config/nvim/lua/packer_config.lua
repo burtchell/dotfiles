@@ -55,6 +55,7 @@ return packer.startup(function(use)
   use "moll/vim-bbye" -- Delete buffers without accidentally messing up layout
   use "lukas-reineke/indent-blankline.nvim" -- Draw vertical lines in nested indents
   use "nvim-lualine/lualine.nvim" -- Status bar replacement
+  use "goolord/alpha-nvim" -- Greeting screen for nvim
 
   -- Colorschemes
   use "shaunsingh/nord.nvim"
