@@ -1,4 +1,4 @@
--- install plugin manager (packer) and install listed plugins
+-- https://github.com/wbthomason/packer.nvim
 
 local fn = vim.fn
 
