@@ -43,3 +43,11 @@ Note: If you would prefer to install packages manually or something goes wrong w
 - [Mathias Bynens](https://github.com/mathiasbynens) and their [dotfiles repository](https://github.com/mathiasbynens/dotfiles), which inspired my oh-my-posh theme and use of a private `.extra` file.
 - [Fireship](https://www.youtube.com/c/Fireship) and their [dotfiles tutorial](https://www.youtube.com/watch?v=r_MpUP6aKiQ), which showed me how to utilize symbolic links.
 - [chris@machine](https://github.com/LunarVim) and their [Neovim-from-scratch repository](https://github.com/LunarVim/Neovim-from-scratch) from which most of my lua-based nvim configuration is based.
+
+## TODOs
+
+- Automate neovim's lsp configs.lua file to apply global configs to every installed lsp (saves me a step when I use a new lsp).
+- Add [which-key](https://github.com/folke/which-key.nvim) to neovim configs.
+- Over time, simplify and tweak my neovim keybindings.
+- Look into using [Stow](https://www.gnu.org/software/stow/) to source my dotfiles, rather than my custom script. Or look into other bootstrapping options.
+  - This is helpful when deploying my [home server](https://github.com/dukeofjukes/homeserver) with Ansible.
