@@ -6,7 +6,7 @@ if not status_ok then
   return
 end
 
-vim.api.nvim_set_keymap("n", "<C-p>", ":lua require'telescope.builtin'.git_files()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-p>", ":lua require('telescope.builtin').find_files()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", { noremap = true, silent = true })
 
 function telescope_buffer_dir()
