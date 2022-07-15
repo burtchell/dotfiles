@@ -122,8 +122,8 @@ require'nvim-tree'.setup {
     interval = 100,
   },
   git = {
-    enable = true,
-    ignore = true,
+    enable = false,
+    ignore = false,
     timeout = 400,
   },
   actions = {
