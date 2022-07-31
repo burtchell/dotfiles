@@ -42,7 +42,11 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+# serve a localhost server with npm
 if type -q npm
   set -l LOCAL_IP `ipconfig getifaddr en0`
   alias serve="browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000"
 end
+
+# upgrade and update all packages (apt and brew)
+alias updateall="sudo apt update -y && sudo apt upgrade -y && brew update && brew upgrade"
