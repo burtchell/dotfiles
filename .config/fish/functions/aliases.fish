@@ -48,9 +48,7 @@ if type -q npm
   alias serve="browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000"
 end
 
-<<<<<<< HEAD
-alias python="python3"
-=======
 # upgrade and update all packages (apt and brew)
 alias updateall="sudo apt update -y && sudo apt upgrade -y && brew update && brew upgrade"
->>>>>>> 3988a924ca3112412a59c6668fe852ac1194dde8
+
+alias python="python3"
