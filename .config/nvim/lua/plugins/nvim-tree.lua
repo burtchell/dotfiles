@@ -117,10 +117,6 @@ require'nvim-tree'.setup {
     custom = {},
     exclude = {},
   },
-  filesystem_watchers = {
-    enable = false,
-    interval = 100,
-  },
   git = {
     enable = false,
     ignore = false,
