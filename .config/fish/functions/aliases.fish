@@ -50,5 +50,3 @@ end
 
 # upgrade and update all packages (apt and brew)
 alias updateall="sudo apt update -y && sudo apt upgrade -y && brew update && brew upgrade"
-
-alias python="python3"
