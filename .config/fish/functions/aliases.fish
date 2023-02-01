@@ -26,6 +26,8 @@ alias ga="git add"
 alias gaa="git add -A"
 alias gc="git commit -m"
 alias gp="git push"
+alias gl="git log"
+alias gg='git log --graph --date=human --all --pretty="%C(yellow)%h %C(blue)%ad %C(green)%d%n%C(white)%s"%n'
 
 # Repace ls with exa
 alias ls="exa --icons --group-directories-first"
