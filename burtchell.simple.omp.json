@@ -42,6 +42,21 @@
       "type": "prompt"
     },
     {
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "p:green",
+          "properties": {
+            "display_default": false
+          },
+          "template": "{{ if .Venv }}({{ .Venv }} {{ .Full }}) {{ end }}"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
       "alignment": "left",
       "newline": true,
       "segments": [

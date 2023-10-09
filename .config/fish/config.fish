@@ -20,7 +20,8 @@ bind \cH backward-kill-word
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f /Users/brandon/miniconda3/bin/conda
-    eval /Users/brandon/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+  eval /Users/brandon/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+  conda config --set changeps1 false
 end
 # <<< conda initialize <<<
 
