@@ -65,7 +65,9 @@ link ~/dotfiles/.gitignore ~/.gitignore
 # copy neofetch config instead of linking, so the user can manually configure per system w/o being tracked by git
 if [[ -e ~/.config/neofetch/config.conf ]]; then
   rm ~/.config/neofetch/config.conf
+  rm ~/.config/neofetch/slime.txt
 fi
 cp ~/dotfiles/.config/neofetch/config.conf ~/.config/neofetch/
+cp ~/dotfiles/.config/neofetch/slime.txt ~/.config/neofetch/
 
 echo Done.

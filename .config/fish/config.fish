@@ -1,7 +1,7 @@
 # Starting point for fish configs
 
 function fish_greeting
-  neofetch
+  neofetch --ascii ~/.config/neofetch/slime.txt
 end
 
 # Init oh-my-posh
