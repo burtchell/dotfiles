@@ -49,10 +49,10 @@ fisher install jethrokuan/z
 
 ## Clone and Link
 
-After a terminal reload, clone this repo into the home directory.
+After a terminal reload, clone this repo into the home directory (I recommend cloning via SSH):
 
 ```
-git clone https://github.com/dukeofjukes/dotfiles.git
+git clone git@github.com:dukeofjukes/dotfiles.git
 ```
 
 From `~/dotfiles/`, run:
@@ -65,7 +65,7 @@ Reload the terminal to ensure all changes have been made.
 
 ## `~/.extra`
 
-If you have any extra commands and configurations that need to be loaded without forking/pushing to this repo, put them in `~/.extra`. This file will be untracked and can be used to add anything private. My `/.config/fish/config.fish` script will run this using bash every time fish starts up. Here's what mine looks like:
+If you have any extra commands and configurations that need to be loaded without forking/pushing to this repo, put them in `~/.extra`. This file will be untracked and can be used to add anything private. My `/.config/fish/config.fish` script will invoke this using bash every time fish starts up. Here's what mine looks like:
 
 ```
 GIT_AUTHOR_NAME="Brandon Burtchell"
@@ -76,6 +76,10 @@ git config --global user.email "$GIT_AUTHOR_EMAIL"
 
 git config --global core.editor nvim
 ```
+
+## On Windows
+
+Be sure to copy-paste `/.config/alacritty/alacritty.toml` from this repo (from WSL file system) to `%appdata%\alacritty\` in your Windows file system.
 
 ## Acknowledgements
 
