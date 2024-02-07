@@ -1,6 +1,6 @@
 # dotfiles
 
-My linux configuration files. Everything should work with WSL and macOS unless otherwise noted. This repo requires sudo privaleges to install dependencies, but in a pinch you could easily copy-paste the contents of particular files.
+My configuration files. Everything should work with WSL and macOS unless otherwise noted. This repo requires sudo privilages to install dependencies, but in a pinch you could easily copy-paste the contents of particular files.
 
 ## Dependencies
 
@@ -28,15 +28,24 @@ brew install oh-my-posh neofetch exa fish fisher neovim
 
 ### fish
 
-> Note: These directories will be different for macOS.
+To set fish as the default shell and make it aware of homebrew, run the following commands:
 
-To set fish as the default shell, run the following commands
+For Linux:
 
 ```
-echo /home/linuxbrew/.linuxbrew/bin/fish | sudo tee -a /etc/shells;
+echo /home/linuxbrew/.linuxbrew/bin/fish | sudo tee -a /etc/shells
 fish
 fish_add_path /home/linuxbrew/.linuxbrew/bin
 chsh -s /home/linuxbrew/.linuxbrew/bin/fish
+```
+
+For macOS:
+
+```
+echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
+fish
+fish_add_path /opt/homebrew/bin
+chsh -s /opt/homebrew/bin/fish
 ```
 
 If fish isn't the default shell after a terminal reload, ensure it is after a full restart. If nothing else works, as a last resort, add `fish` to the end of `.profile`.

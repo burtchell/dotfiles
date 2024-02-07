@@ -1,4 +1,7 @@
-# This file contains global gitignores.
+# fish likes to add stuff automatically, ignore anything we don't want shared across devices:
+.config/fish
+!.config/fish/functions/aliases.fish
+!.config/fish/config.fish
 
 # Misc.
 .DS_store
