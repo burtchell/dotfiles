@@ -4,8 +4,11 @@ function fish_greeting
   neofetch --ascii ~/.config/neofetch/slime.txt
 end
 
-# Init oh-my-posh
+# init oh-my-posh
 oh-my-posh init fish --config ~/.config/burtchell.simple.omp.json | source
+
+# init zoxide
+zoxide init fish | source
 
 # Get aliases
 . ~/.config/fish/functions/aliases.fish
