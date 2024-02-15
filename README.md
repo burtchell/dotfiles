@@ -23,7 +23,7 @@ Install [homebrew](https://brew.sh) and run the "Next Steps" commands:
 Reload the terminal. Then, install the following packages with homebrew:
 
 ```
-brew install oh-my-posh neofetch exa fish fisher neovim
+brew install oh-my-posh neofetch exa fish fisher neovim fzf zoxide
 ```
 
 ### fish
@@ -49,12 +49,6 @@ chsh -s /opt/homebrew/bin/fish
 ```
 
 If fish isn't the default shell after a terminal reload, ensure it is after a full restart. If nothing else works, as a last resort, add `fish` to the end of `.profile`.
-
-Lastly, install [z (cd history)](https://github.com/jethrokuan/z):
-
-```
-fisher install jethrokuan/z
-```
 
 ## Clone and Link
 
