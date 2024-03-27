@@ -5,5 +5,5 @@ return {
   priority = 1000,  -- ensure this loads first
   config = function()
     vim.cmd([[colorscheme nord]])
-  end,
+  end
 }
