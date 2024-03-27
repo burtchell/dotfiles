@@ -110,6 +110,8 @@ chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
 ```
 
+Then add the following line to your shell configuration (e.g., `.bashrc`):
+
 ```
 export PATH="~/neovim/squashfs-root/usr/bin:$PATH"
 ```
