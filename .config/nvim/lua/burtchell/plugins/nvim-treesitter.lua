@@ -38,7 +38,7 @@ return {
       },
       auto_install = false,
       highlight = {
-        enable = true,
+        enable = false,
         disable = {}, -- manually disable some languages
         additional_vim_regex_highlighting = true,
       },
