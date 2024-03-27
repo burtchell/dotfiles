@@ -86,6 +86,12 @@ Be sure to copy-paste `/.config/alacritty/alacritty.toml` from this repo (from W
 
 ## Neovim without `sudo`
 
+First, ensure dotfiles are cloned:
+
+```
+git clone git@github.com:dukeofjukes/dotfiles.git
+```
+
 To install and configure neovim without sudo, run the following commands from `~`:
 
 ```
