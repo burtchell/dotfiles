@@ -38,7 +38,7 @@ local options = {
 }
 
 local windowOptions = {
-  colorcolumn = "80",
+  -- colorcolumn = "100",  -- fill a vertical column for line-limit hint
 }
 
 vim.opt.shortmess:append "c"
