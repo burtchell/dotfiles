@@ -5,18 +5,24 @@ return {
   branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
+    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     "nvim-tree/nvim-web-devicons",
   },
 
   config = function()
     local telescope = require("telescope")
-    local telescope_actions = require("telescope.actions")
+    local actions = require("telescope.actions")
 
     telescope.setup({
       defaults = {
         mappings = {
           n = {
-            [";;"] = telescope_actions.close
+            [";;"] = actions.close
+          },
+          i = {
+            ["<C-k>"] = actions.move_selection_previous, -- move to prev result
+            ["<C-j>"] = actions.move_selection_next, -- move to next result
+            ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
           },
         },
       },
@@ -32,6 +38,8 @@ return {
         }
       }
     })
+
+    telescope.load_extension("fzf")
 
     vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>")
     vim.keymap.set("n", "<C-t>", "<cmd>Telescope live_grep<cr>")
