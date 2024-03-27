@@ -1,6 +1,6 @@
 # dotfiles
 
-My configuration files. Everything should work with WSL and macOS unless otherwise noted. This repo requires sudo privilages to install dependencies, but in a pinch you could easily copy-paste the contents of particular files.
+My configuration files. Everything should work with WSL and macOS unless otherwise noted. This repo requires sudo privaleges for the most streamlined installation, but instructions are included to get neovim working on any linux machine.
 
 ## Dependencies
 
@@ -84,10 +84,39 @@ git config --global core.editor nvim
 
 Be sure to copy-paste `/.config/alacritty/alacritty.toml` from this repo (from WSL file system) to `%appdata%\alacritty\` in your Windows file system.
 
+## Neovim without `sudo`
+
+To install and configure neovim without sudo, run the following commands from `~`:
+
+```
+mkdir neovim && cd neovim
+```
+
+```
+wget https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+```
+
+```
+chmod u+x nvim.appimage
+```
+
+```
+./nvim.appimage --appimage-extract
+```
+
+```
+export PATH="~/neovim/squashfs-root/usr/bin:$PATH"
+```
+
+Then run the following command to create a symbolic link to the neovim config from my dotfiles:
+
+```
+ln -s ~/dotfiles/.config/nvim/ ~/.config/nvim
+```
+
 ## Acknowledgements
 
 - [Mathias Bynens](https://github.com/mathiasbynens) and their [dotfiles repository](https://github.com/mathiasbynens/dotfiles), which inspired my oh-my-posh theme and use of a private `.extra` file.
-- [chris@machine](https://github.com/LunarVim) and their [Neovim-from-scratch repository](https://github.com/LunarVim/Neovim-from-scratch) from which most of my lua-based nvim configuration is based.
 
 ## TODOs
 
