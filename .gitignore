@@ -3,6 +3,9 @@
 !.config/fish/functions/aliases.fish
 !.config/fish/config.fish
 
+# lazy.nvim
+lazy-lock.json
+
 # Misc.
 .DS_store
 node_modules
