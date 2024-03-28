@@ -3,6 +3,9 @@
 !.config/fish/functions/aliases.fish
 !.config/fish/config.fish
 
+# tpm (tmux plugin manager)
+.config/tmux/plugins/
+
 # lazy.nvim
 lazy-lock.json
 
