@@ -16,7 +16,7 @@ return {
       [[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
     }
     dashboard.section.buttons.val = {
-      dashboard.button("f", "  Find file", ":Telescope git_files <CR>"),
+      dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
       dashboard.button("n", "󰙅  Browse filetree", ":NvimTreeToggle <CR>"),
       dashboard.button("e", "󰈔  New file", ":ene <BAR> startinsert <CR>"),
       -- dashboard.button("p", "  Find project", ":Telescope projects <CR>"),

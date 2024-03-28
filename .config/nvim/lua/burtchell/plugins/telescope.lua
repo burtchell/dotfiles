@@ -5,7 +5,14 @@ return {
   branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+    -- TODO: unable to search files on WSL with this extension
+    -- {
+    --   "nvim-telescope/telescope-fzf-native.nvim",
+    --   build = "make",
+    --   config = function()
+    --     require("telescope").load_extension("fzf")
+    --   end,
+    -- },
     "nvim-tree/nvim-web-devicons",
   },
 
@@ -15,6 +22,11 @@ return {
 
     telescope.setup({
       defaults = {
+        file_ignore_patterns = {
+          -- patterns to be ignored by all search functions
+          ".git",
+          "node_modules",
+        },
         mappings = {
           n = {
             [";;"] = actions.close
@@ -28,18 +40,16 @@ return {
       },
       pickers = {
         find_files = {
-          find_command = { "rg", "--ignore", "-L", "--hidden", "--files" },
-        },
-        git_files = {
-          find_command = { "rg", "--ignore", "-L", "--hidden", "--files" },
+          hidden = true,
         },
         live_grep = {
-          find_command = { "rg", "--ignore", "-L", "--hidden", "--files" },
-        }
-      }
+          additional_args = function(opts)
+            -- live_grep doesn't have an accessible hidden field like find_files, so we can just pass an arg
+            return {"--hidden"}
+          end
+        },
+      },
     })
-
-    telescope.load_extension("fzf")
 
     vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>")
     vim.keymap.set("n", "<C-t>", "<cmd>Telescope live_grep<cr>")
