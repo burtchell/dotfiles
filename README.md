@@ -4,12 +4,16 @@ My configuration files. Everything should work with WSL and macOS unless otherwi
 
 ## Dependencies
 
-### Stow
-
-Install stow using your package manager. For example:
+Install the following using your package manager. For example:
 
 ```
-sudo apt install stow
+sudo apt install stow tmux
+```
+
+And clone tpm:
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 ### Homebrew
@@ -34,8 +38,17 @@ For Linux:
 
 ```
 echo /home/linuxbrew/.linuxbrew/bin/fish | sudo tee -a /etc/shells
+```
+
+```
 fish
+```
+
+```
 fish_add_path /home/linuxbrew/.linuxbrew/bin
+```
+
+```
 chsh -s /home/linuxbrew/.linuxbrew/bin/fish
 ```
 
@@ -43,8 +56,17 @@ For macOS:
 
 ```
 echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
+```
+
+```
 fish
+```
+
+```
 fish_add_path /opt/homebrew/bin
+```
+
+```
 chsh -s /opt/homebrew/bin/fish
 ```
 
@@ -84,7 +106,7 @@ git config --global core.editor nvim
 
 Be sure to copy-paste `/.config/alacritty/alacritty.toml` from this repo (from WSL file system) to `%appdata%\alacritty\` in your Windows file system.
 
-## Neovim without `sudo`
+## Neovim without `sudo` privaleges
 
 First, ensure dotfiles are cloned:
 
@@ -116,7 +138,7 @@ Then add the following line to your shell configuration (e.g., `.bashrc`):
 export PATH="~/neovim/squashfs-root/usr/bin:$PATH"
 ```
 
-Then run the following command to create a symbolic link to the neovim config from my dotfiles:
+Then run the following command to manually create a symbolic link to the neovim config from my dotfiles:
 
 ```
 ln -s ~/dotfiles/.config/nvim/ ~/.config/nvim
@@ -130,4 +152,3 @@ ln -s ~/dotfiles/.config/nvim/ ~/.config/nvim
 
 - Automate neovim's lsp configs.lua file to apply global configs to every installed lsp (saves me a step when I use a new lsp).
 - Add [which-key](https://github.com/folke/which-key.nvim) to neovim configs.
-- Over time, simplify and tweak my neovim keybindings.
