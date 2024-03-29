@@ -4,12 +4,14 @@ return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
+    "williamboman/mason-lspconfig.nvim",
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
   },
   config = function()
     local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
+    local mason_lspconfig = require("mason-lspconfig")
 
     local keymap = vim.keymap -- for conciseness
 
@@ -61,15 +63,28 @@ return {
     -- used to enable autocompletion (assign to every lsp server config)
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
-    -- Change the Diagnostic symbols in the sign column (gutter)
-    -- (not in youtube nvim video)
-    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+    local signs = { Error = "", Warn = "", Hint = "", Info = "" }
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    require("mason-lspconfig").setup_handlers({
+    vim.diagnostic.config({
+      virtual_text = false, -- disable virtual text
+      update_in_insert = true,
+      underline = true,
+      severity_sort = true,
+      float = {
+        focusable = false,
+        style = "minimal",
+        border = "rounded",
+        source = "always",
+        header = "",
+        prefix = "",
+      },
+    })
+
+    mason_lspconfig.setup_handlers({
       -- apply defaults to all LSP servers
       function(server)
         lspconfig[server].setup({
@@ -77,25 +92,25 @@ return {
           on_attach = on_attach,
         })
       end,
+    })
 
-      -- manually config any special LSP servers
-      lspconfig["lua_ls"].setup({
-        settings = { -- custom settings for lua
-          Lua = {
+    -- manually config any special LSP servers
+    lspconfig["lua_ls"].setup({
+      settings = {
+        Lua = {
+          diagnostics = {
             -- make the language server recognize "vim" global
-            diagnostics = {
-              globals = { "vim" },
-            },
-            workspace = {
-              -- make language server aware of runtime files
-              library = {
-                [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                [vim.fn.stdpath("config") .. "/lua"] = true,
-              },
+            globals = { "vim" },
+          },
+          workspace = {
+            -- make language server aware of runtime files
+            library = {
+              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+              [vim.fn.stdpath("config") .. "/lua"] = true,
             },
           },
         },
-      })
+      },
     })
   end,
 }
