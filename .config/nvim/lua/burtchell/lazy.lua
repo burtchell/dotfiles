@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup(
   {
     { import = "burtchell.plugins" },
+    { import = "burtchell.plugins.lsp" },
   },
   {
     checker = {

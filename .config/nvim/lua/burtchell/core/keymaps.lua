@@ -41,7 +41,7 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Close buffers
-keymap("n", "<C-x>", ":Bdelete!<CR>", opts)
+keymap("n", "<C-x>", ":bdelete!<CR>", opts)
 
 -- INSERT --
 -- Press ;; fast to go back to normal mode
