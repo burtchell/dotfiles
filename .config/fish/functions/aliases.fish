@@ -39,6 +39,17 @@ alias la="exa -l --all --icons --group-directories-first --no-permissions"
 alias vi="nvim"
 alias vim="nvim"
 
+# tmux
+alias tm="tmux"
+alias tml="tmux ls"
+alias tmls="tmux ls"
+alias tma="tmux attach-session"
+alias tmat="tmux attach-session -t"
+alias tmka="tmux kill-session -a"
+alias tmkt="tmux kill-session -t"
+alias tmn="tmux new-session"
+alias tmns="tmux new -s"
+
 # Always enable colored grep output
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -54,3 +65,4 @@ end
 alias updateall="sudo apt update -y && sudo apt upgrade -y && brew update && brew upgrade"
 
 alias neofetch="neofetch --ascii ~/.config/neofetch/slime.txt"
+
