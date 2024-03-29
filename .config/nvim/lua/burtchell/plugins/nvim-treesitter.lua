@@ -42,9 +42,9 @@ return {
         disable = {}, -- manually disable some languages
         additional_vim_regex_highlighting = true,
       },
-      indent = {
-        enable = true,
-      },
+      -- indent = {
+      --   enable = true,
+      -- },
     })
   end
 }
