@@ -144,6 +144,36 @@ Then run the following command to manually create a symbolic link to the neovim 
 ln -s ~/dotfiles/.config/nvim/ ~/.config/nvim
 ```
 
+My neovim config depends on `npm` to install LSPs, which often isn't installed on servers. Run the following commands to locally install `npm` (credit to [David Golfarb](https://askubuntu.com/a/982003)):
+
+```
+echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
+```
+
+```
+. ~/.bashrc
+```
+
+```
+mkdir ~/local ~/node-latest-install && cd ~/node-latest-install
+```
+
+```
+wget -c http://nodejs.org/dist/node-latest.tar.gz | tar xz --strip-components=1
+```
+
+```
+./configure --prefix=~/local
+```
+
+```
+make install
+```
+
+```
+wget -c https://www.npmjs.org/install.sh | sh
+```
+
 ## Acknowledgements
 
 - [Mathias Bynens](https://github.com/mathiasbynens) and their [dotfiles repository](https://github.com/mathiasbynens/dotfiles), which inspired my oh-my-posh theme and use of a private `.extra` file.
