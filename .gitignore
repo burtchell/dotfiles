@@ -1,6 +1,7 @@
 # fish likes to add stuff automatically, ignore anything we don't want shared across devices:
 .config/fish
 !.config/fish/functions/aliases.fish
+!.config/fish/functions/keychain.fish
 !.config/fish/config.fish
 
 # tpm (tmux plugin manager)

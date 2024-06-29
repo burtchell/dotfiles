@@ -1,6 +1,6 @@
 # dotfiles
 
-My configuration files. Everything should work with WSL and macOS unless otherwise noted. This repo requires sudo privaleges for the most streamlined installation, but instructions are included to get neovim working on any linux machine.
+My configuration files. Everything should work with WSL and macOS unless otherwise noted. This repo requires sudo privileges for the most streamlined installation, but instructions are included to get neovim working on any linux machine.
 
 ## Dependencies
 
@@ -27,7 +27,7 @@ Install [homebrew](https://brew.sh) and run the "Next Steps" commands:
 Reload the terminal. Then, install the following packages with homebrew:
 
 ```
-brew install oh-my-posh neofetch exa fish fisher neovim fzf zoxide
+brew install oh-my-posh neofetch exa fish fisher neovim fzf zoxide keychain
 ```
 
 ### fish
