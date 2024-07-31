@@ -30,10 +30,10 @@ alias gl="git log"
 alias gg='git log --graph --date=human --all --pretty="%C(yellow)%h %C(blue)%ad %C(green)%d%n%C(white)%s"%n'
 
 # Repace ls with exa
-alias ls="exa --icons --group-directories-first"
-alias ll="exa -l --icons --group-directories-first --no-permissions"
-alias lt="exa -Ta --icons --group-directories-first --level=4 --ignore-glob=\".git|node_modules\""
-alias la="exa -l --all --icons --group-directories-first --no-permissions"
+alias ls="eza -a --icons --group-directories-first"
+alias ll="eza -all --icons --group-directories-first"
+alias la="eza -all --icons --group-directories-first"
+alias lt="eza -Ta --icons --group-directories-first --level=4 --ignore-glob=\".git|node_modules\""
 
 # nvim alias
 alias vi="nvim"

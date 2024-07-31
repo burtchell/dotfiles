@@ -27,7 +27,7 @@ Install [homebrew](https://brew.sh) and run the "Next Steps" commands:
 Reload the terminal. Then, install the following packages with homebrew:
 
 ```
-brew install oh-my-posh neofetch exa fish fisher neovim fzf zoxide keychain
+brew install oh-my-posh neofetch eza fish fisher neovim fzf zoxide keychain
 ```
 
 ### fish
