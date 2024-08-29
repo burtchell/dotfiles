@@ -100,6 +100,8 @@ GIT_AUTHOR_EMAIL="62345978+dukeofjukes@users.noreply.github.com"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 
 git config --global core.editor nvim
+
+git config --global core.editor core.excludesFile '~/.gitignore-global'
 ```
 
 ## On Windows

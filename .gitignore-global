@@ -1,0 +1,8 @@
+# global git-ignores
+
+**/.vscode/
+**/.history/
+
+.DS_Store
+
+**/__pycache__/
