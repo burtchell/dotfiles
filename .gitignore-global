@@ -3,6 +3,6 @@
 **/.vscode/
 **/.history/
 
-.DS_Store
+**/.DS_Store
 
 **/__pycache__/
