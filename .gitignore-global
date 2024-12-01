@@ -3,7 +3,7 @@
 **/.vscode/
 **/.history/
 
-.DS_Store
 **/*Zone.Identifier
+**/.DS_Store
 
 **/__pycache__/
