@@ -93,7 +93,7 @@ Reload the terminal to ensure all changes have been made.
 If you have any extra commands and configurations that need to be loaded without forking/pushing to this repo, put them in `~/.extra`. This file will be untracked and can be used to add anything private. My `/.config/fish/config.fish` script will invoke this using bash every time fish starts up. Here's what mine looks like:
 
 ```
-GIT_AUTHOR_NAME="Brandon Burtchell"
+GIT_AUTHOR_NAME="Brandon Alexander Burtchell"
 git config --global user.name "$GIT_AUTHOR_NAME"
 
 GIT_AUTHOR_EMAIL="62345978+dukeofjukes@users.noreply.github.com"
