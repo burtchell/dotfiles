@@ -2,7 +2,6 @@ autoload -U colors && colors
 bindkey -e
 NEWLINE=$'\n'
 PS1="%{$fg[magenta]%}%~%{$fg[red]%} %{$reset_color%}>%b "
-# PS1="%{$fg[magenta]%}%~%{$fg[red]%}${NEWLINE}%{$reset_color%}>%b "
 
 setopt histignorealldups sharehistory
 HISTSIZE=1000
@@ -29,6 +28,10 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+# load homebrew in linux or macOS
+[ -d /home/linuxbrew/.linuxbrew/bin ] && export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+[ -d /opt/homebrew/bin ] && export PATH="/opt/homebrew/bin:$PATH"
+
 setopt autocd
 eval "$(zoxide init zsh)"
 
@@ -47,7 +50,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-[ -r ~/.config/zsh/aliases.zsh ] && [ -f ~/.config/zsh/aliases.zsh ] && . ~/.config/zsh/aliases.zsh
-[ -r ~/.config/zsh/extra.zsh ] && [ -f ~/.config/zsh/extra.zsh ] && . ~/.config/zsh/extra.zsh
-[ -r ~/.extra ] && [ -f ~/.extra ] && . ~/.extra
+[ -r ~/.config/zsh/aliases.zsh ] && . ~/.config/zsh/aliases.zsh
+[ -r ~/.config/zsh/extra.zsh ] && . ~/.config/zsh/extra.zsh
+[ -r ~/.extra ] && . ~/.extra
 
