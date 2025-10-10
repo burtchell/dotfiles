@@ -45,7 +45,7 @@ keymap("n", "<C-x>", ":bdelete!<CR>", opts)
 
 -- INSERT --
 -- Press ;; fast to go back to normal mode
-keymap ("i", ";;", "<ESC>", opts)
+-- keymap ("i", ";;", "<ESC>", opts)
 
 -- VISUAL --
 -- Stay in indent mode

@@ -4,6 +4,10 @@
 !.config/fish/functions/keychain.fish
 !.config/fish/config.fish
 
+.config/zsh
+!.config/zsh/.zshrc
+!.config/zsh/aliases.zsh
+
 # tpm (tmux plugin manager)
 .config/tmux/plugins/
 
