@@ -27,7 +27,7 @@ Install [homebrew](https://brew.sh) and run the "Next Steps" commands:
 Reload the terminal. Then, install the following packages with homebrew:
 
 ```
-brew install oh-my-posh neofetch eza fish fisher neovim fzf zoxide keychain
+brew install eza fish fisher neovim fzf zoxide keychain
 ```
 
 ### fish
@@ -175,8 +175,4 @@ make install
 ```
 wget -c https://www.npmjs.org/install.sh | sh
 ```
-
-## Acknowledgements
-
-- [Mathias Bynens](https://github.com/mathiasbynens) and their [dotfiles repository](https://github.com/mathiasbynens/dotfiles), which inspired my oh-my-posh theme and use of a private `.extra` file.
 

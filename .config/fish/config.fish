@@ -1,27 +1,28 @@
 # Starting point for fish configs
 
 function fish_greeting
-  #neofetch --ascii ~/.config/neofetch/slime.txt
+  # intentionally left blank
 end
 
-# init oh-my-posh
-oh-my-posh init fish --config ~/.config/burtchell.simple.omp.json | source
+function fish_prompt
+  string join '' -- (set_color magenta) (prompt_pwd --full-length-dirs=3 --dir-length=1) (set_color black) (git branch 2> /dev/null |sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/') (set_color normal) ' > '
+end
+
+function fish_right_prompt
+  # intentionally left blank
+end
 
 # init zoxide
 zoxide init fish | source
 
-# Get aliases
 . ~/.config/fish/functions/aliases.fish
-
-# config keychain
 . ~/.config/fish/functions/keychain.fish
-
 [ -r ~/.extra ] && [ -f ~/.extra ] && bash ~/.extra
 
 # force arrow key word movement in terminal (gnome terminal interferes)
-bind \e\[1\;5C forward-word
-bind \e\[1\;5D backward-word
-bind \cH backward-kill-word
+# bind \e\[1\;5C forward-word
+# bind \e\[1\;5D backward-word
+# bind \cH backward-kill-word
 
 # for macOS
 # >>> conda initialize >>>

@@ -28,9 +28,10 @@ alias gc="git commit -m"
 alias gp="git push"
 alias gl="git log"
 alias gg='git log --graph --date=human --all --pretty="%C(yellow)%h %C(blue)%ad %C(green)%d%n%C(white)%s"%n'
+alias gd="git diff"
 
 # Repace ls with exa
-alias ls="eza -a --icons --group-directories-first"
+alias ls="eza --icons --group-directories-first"
 alias ll="eza -all --icons --group-directories-first"
 alias la="eza -all --icons --group-directories-first"
 alias lt="eza -Ta --icons --group-directories-first --level=4 --ignore-glob=\".git|node_modules\""
@@ -38,6 +39,9 @@ alias lt="eza -Ta --icons --group-directories-first --level=4 --ignore-glob=\".g
 # nvim alias
 alias vi="nvim"
 alias vim="nvim"
+alias im="nvim"
+alias vm="nvim"
+alias vmi="nvim"
 
 # tmux
 alias tm="tmux"
@@ -54,15 +58,4 @@ alias tmns="tmux new -s"
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
-# serve a localhost server with npm
-if type -q npm
-  set -l LOCAL_IP `ipconfig getifaddr en0`
-  alias serve="browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000"
-end
-
-# upgrade and update all packages (apt and brew)
-alias updateall="sudo apt update -y && sudo apt upgrade -y && brew update && brew upgrade"
-
-alias neofetch="neofetch --ascii ~/.config/neofetch/slime.txt"
 

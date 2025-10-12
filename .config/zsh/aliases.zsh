@@ -28,7 +28,7 @@ alias gg='git log --graph --date=human --all --pretty="%C(yellow)%h %C(blue)%ad 
 alias gd="git diff"
 
 # replace ls with eza
-alias ls="eza -a --icons --group-directories-first"
+alias ls="eza --icons --group-directories-first"
 alias ll="eza -all --icons --group-directories-first"
 alias la="eza -all --icons --group-directories-first"
 alias lt="eza -Ta --icons --group-directories-first --level=4 --ignore-glob=\".git|node_modules\""
@@ -37,6 +37,7 @@ alias lt="eza -Ta --icons --group-directories-first --level=4 --ignore-glob=\".g
 alias vi="nvim"
 alias vim="nvim"
 alias im="nvim"
+alias vm="nvim"
 alias vmi="nvim"
 
 # tmux
