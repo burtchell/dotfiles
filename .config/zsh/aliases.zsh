@@ -10,9 +10,10 @@ alias sudo="sudo "
 # fi
 
 alias reload="exec $SHELL -l" # reload the shell
+alias :q="exit"
 
-alias ...="cd ../.."
 alias ..="cd .."
+alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 

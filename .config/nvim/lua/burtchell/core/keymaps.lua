@@ -3,11 +3,10 @@
 
 local opts = { noremap = true, silent = true }
 
--- shorten function name
 local keymap = vim.api.nvim_set_keymap
 
-keymap("", "<Space>", "<Nop>", opts)
 -- space as leader key
+keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -42,10 +41,6 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Close buffers
 keymap("n", "<C-x>", ":bdelete!<CR>", opts)
-
--- INSERT --
--- Press ;; fast to go back to normal mode
--- keymap ("i", ";;", "<ESC>", opts)
 
 -- VISUAL --
 -- Stay in indent mode

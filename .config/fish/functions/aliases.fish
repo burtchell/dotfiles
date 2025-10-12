@@ -9,10 +9,9 @@ if type -q explorer.exe
   alias open="explorer.exe"
 end
 
-# Reload the shell
 alias reload="exec $SHELL -l"
+alias :q="exit"
 
-# Easier navigation: .., ..., ...., ....., and -
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
