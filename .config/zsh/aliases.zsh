@@ -26,6 +26,7 @@ alias gp="git push"
 alias gl="git log"
 alias gg='git log --graph --date=human --all --pretty="%C(yellow)%h %C(blue)%ad %C(green)%d%n%C(white)%s"%n'
 alias gd="git diff"
+alias gurl="git config --get remote.origin.url"
 
 # replace ls with eza
 alias ls="eza --icons --group-directories-first"
