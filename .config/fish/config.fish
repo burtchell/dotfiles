@@ -16,7 +16,7 @@ end
 zoxide init fish | source
 
 . ~/.config/fish/functions/aliases.fish
-. ~/.config/fish/functions/keychain.fish
+# . ~/.config/fish/functions/keychain.fish
 [ -r ~/.extra ] && [ -f ~/.extra ] && bash ~/.extra
 
 # force arrow key word movement in terminal (gnome terminal interferes)

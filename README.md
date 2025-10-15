@@ -10,12 +10,6 @@ Install the following using your package manager. For example:
 sudo apt install stow tmux
 ```
 
-And clone tpm:
-
-```
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
-
 ### Homebrew
 
 Install [homebrew](https://brew.sh) and run the "Next Steps" commands:
@@ -27,7 +21,7 @@ Install [homebrew](https://brew.sh) and run the "Next Steps" commands:
 Reload the terminal. Then, install the following packages with homebrew:
 
 ```
-brew install eza fish fisher neovim fzf zoxide keychain
+brew install eza fish neovim fzf zoxide fd sk
 ```
 
 ### fish
