@@ -1,15 +1,10 @@
 #!/usr/bin/env bash
 
-cd $(tmux display -p -F "#{pane_current_path}")
-url=$(git remote get-url origin)
+dir=$(tmux display -p -F "#{pane_current_path}")
+cd "$dir"
+url=$(. ~/.config/scripts/get-github-url.sh)
 
-if [[ $url == *github.com* ]]; then
-    if [[ $url == git@* ]]; then
-        url="${url#git@}"
-        url="${url/:/\/}" 
-        url="https://$url"
-    fi
-
+if [[ ! -z $url ]]; then
     echo "$url"
     if command -v explorer.exe >/dev/null 2>&1
     then
@@ -18,5 +13,5 @@ if [[ $url == *github.com* ]]; then
       open "$url"
     fi
 else
-    echo "This repository is not hosted on GitHub"
+    echo "No github URL found at ${dir}"
 fi
