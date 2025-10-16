@@ -51,7 +51,15 @@ alias vm="nvim"
 alias vmi="nvim"
 
 # tmux
-alias tm="tmux"
+function tm
+  if tmux has-session -t home  #^/dev/null
+      echo "Attaching to existing home session..."
+      tmux attach-session -t "home"
+  else
+      echo "Creating new home session..."
+      tmux new-session -s "home"
+  end
+end
 alias tml="tmux ls"
 alias tmls="tmux ls"
 alias tma="tmux attach-session"

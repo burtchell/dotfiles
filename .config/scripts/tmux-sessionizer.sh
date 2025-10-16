@@ -23,6 +23,9 @@ fi
 [[ ! $selected ]] && exit 0
 
 selected_name=$(basename "$selected" | tr . _)
+if [[ "$selected_name" == "$(whoami)" ]]; then
+    selected_name="home"
+fi
 
 if ! tmux has-session -t "$selected_name"; then
     tmux new-session -ds "$selected_name" -c "$selected"
