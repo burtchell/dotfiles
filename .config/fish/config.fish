@@ -27,13 +27,13 @@ zoxide init fish | source
 # for macOS
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /home/brandon/miniconda3/bin/conda
-    eval /home/brandon/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+if test -f /Users/brandon/miniconda3/bin/conda
+    eval /Users/brandon/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 else
-    if test -f "/home/brandon/miniconda3/etc/fish/conf.d/conda.fish"
-        . "/home/brandon/miniconda3/etc/fish/conf.d/conda.fish"
+    if test -f "/Users/brandon/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/Users/brandon/miniconda3/etc/fish/conf.d/conda.fish"
     else
-        set -x PATH "/home/brandon/miniconda3/bin" $PATH
+        set -x PATH "/Users/brandon/miniconda3/bin" $PATH
     end
 end
 # <<< conda initialize <<<
