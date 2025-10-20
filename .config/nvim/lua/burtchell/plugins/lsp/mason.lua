@@ -26,24 +26,20 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
-        -- "clangd",  -- c/c++ lsp
-        -- "tsserver",  -- js and ts
-        -- "html",
-        -- "cssls",
-        -- "pyright",
-        -- "lua_ls",
+        "lua_ls",
+        "fish_lsp",
+        "pyright",
+        "clangd",
       },
       automatic_installation = true,
+      automatic_enable = true,
     })
 
     mason_tool_installer.setup({
       ensure_installed = {
-        -- "clang-format",
-        -- "prettier", -- js/ts/html/css/etc. formatter
-        -- "stylua", -- lua formatter
-        -- "black", -- python formatter
-        -- "pylint", -- python linter
-        -- "eslint_d", -- js linter
+        "pylint",
+        "clang-format",
+        "black",
       }
     })
   end

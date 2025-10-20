@@ -2,7 +2,7 @@
 
 function addpaths
     contains -- $argv $fish_user_paths
-       or set -U fish_user_paths $fish_user_paths $argv
+    or set -U fish_user_paths $fish_user_paths $argv
     echo "Updated PATH: $PATH"
 end
 
@@ -20,8 +20,8 @@ alias sudo="sudo "
 
 # If on WSL, add explorer alias
 if type -q explorer.exe
-  alias exp="explorer.exe"
-  alias open="explorer.exe"
+    alias exp="explorer.exe"
+    alias open="explorer.exe"
 end
 
 alias reload="exec $SHELL -l"
@@ -45,11 +45,11 @@ alias gg='git log --graph --date=human --all --pretty="%C(yellow)%h %C(blue)%ad 
 alias gd="git diff"
 
 if test -e ~/.config/scripts/get-github-url.sh
-  function gurl
-    bash ~/.config/scripts/get-github-url.sh
-  end
+    function gurl
+        bash ~/.config/scripts/get-github-url.sh
+    end
 else
-  alias gurl="git remote get-url origin"  # fallback
+    alias gurl="git remote get-url origin" # fallback
 end
 
 # Repace ls with exa
@@ -67,13 +67,13 @@ alias vmi="nvim"
 
 # tmux
 function tm
-  if tmux has-session -t home  #^/dev/null
-      echo "Attaching to existing home session..."
-      tmux attach-session -t "home"
-  else
-      echo "Creating new home session..."
-      tmux new-session -s "home"
-  end
+    if tmux has-session -t home #^/dev/null
+        echo "Attaching to existing home session..."
+        tmux attach-session -t home
+    else
+        echo "Creating new home session..."
+        tmux new-session -s home
+    end
 end
 alias tml="tmux ls"
 alias tmls="tmux ls"
@@ -88,4 +88,3 @@ alias tmns="tmux new -s"
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
