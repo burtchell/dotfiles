@@ -69,4 +69,5 @@ git_branch() {
 PROMPT='%{$fg[magenta]%}%~%{$fg[black]%}$(git_branch)%  %{$reset_color%}> '
 
 # load plugins (must be done last)
-[ -r /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
