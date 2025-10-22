@@ -4,8 +4,7 @@
 !.config/fish/functions/keychain.fish
 !.config/fish/config.fish
 
-# tpm (tmux plugin manager)
-.config/tmux/plugins/
+.config/zsh/.zcompdump
 
 # lazy.nvim
 lazy-lock.json

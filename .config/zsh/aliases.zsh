@@ -4,10 +4,7 @@
 alias sudo="sudo "
 
 # if on WSL, add explorer alias
-# TODO:
-# if [ -f 'explorer.exe' ]; then
-#   alias open="explorer.exe";
-# fi
+[ -x explorer.exe ] && alias open="explorer.exe"
 
 alias reload="exec $SHELL -l" # reload the shell
 alias :q="exit"
@@ -27,7 +24,13 @@ alias gp="git push"
 alias gl="git log"
 alias gg='git log --graph --date=human --all --pretty="%C(yellow)%h %C(blue)%ad %C(green)%d%n%C(white)%s"%n'
 alias gd="git diff"
-alias gurl="git config --get remote.origin.url"
+if [[ -x ~/.config/scripts/get-github-url.sh ]]; then
+  function gurl() {
+    bash ~/.config/scripts/get-github-url.sh
+  }
+else
+  alias gurl="git remote get-url origin" # fallback
+fi
 
 # replace ls with eza
 alias ls="eza --icons --group-directories-first"
@@ -43,7 +46,13 @@ alias vm="nvim"
 alias vmi="nvim"
 
 # tmux
-alias tm="tmux"
+function tm() {
+  if tmux has-session -t home 2>/dev/null; then
+    tmux attach-session -t home
+  else
+    tmux new-session -s home
+  fi
+}
 alias tml="tmux ls"
 alias tmls="tmux ls"
 alias tma="tmux attach-session"

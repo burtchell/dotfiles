@@ -21,50 +21,16 @@ Install [homebrew](https://brew.sh) and run the "Next Steps" commands:
 Reload the terminal. Then, install the following packages with homebrew:
 
 ```
-brew install eza fish neovim fzf zoxide fd sk
+brew install zsh zsh-syntax-highlighting zsh-autosuggestions neovim eza zoxide fzf fd sk
 ```
 
-### fish
+### zsh
 
-To set fish as the default shell and make it aware of homebrew, run the following commands:
-
-For Linux:
+Set zsh as default shell:
 
 ```
-echo /home/linuxbrew/.linuxbrew/bin/fish | sudo tee -a /etc/shells
+chsh -s $(which zsh)
 ```
-
-```
-fish
-```
-
-```
-fish_add_path /home/linuxbrew/.linuxbrew/bin
-```
-
-```
-chsh -s /home/linuxbrew/.linuxbrew/bin/fish
-```
-
-For macOS:
-
-```
-echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
-```
-
-```
-fish
-```
-
-```
-fish_add_path /opt/homebrew/bin
-```
-
-```
-chsh -s /opt/homebrew/bin/fish
-```
-
-If fish isn't the default shell after a terminal reload, ensure it is after a full restart. If nothing else works, as a last resort, add `fish` to the end of `.profile`.
 
 ## Clone and Link
 
