@@ -10,6 +10,19 @@ return {
     local render_md = require("render-markdown")
     render_md.setup({
       enabled = false,
+      heading = {
+        sign = false,
+        position = 'inline',
+        -- icons = { 'H1 ', 'H2 ', 'H3 ', 'H4 ', 'H5 ', 'H6 ' },
+        backgrounds = {
+          '',
+          '',
+          '',
+          '',
+          '',
+          '',
+        },
+      },
       code = {
         style = "normal",
         border = "thick",
