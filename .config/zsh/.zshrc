@@ -62,11 +62,16 @@ function conda() {
 [ -r ~/.config/zsh/extra.zsh ] && . ~/.config/zsh/extra.zsh
 [ -r ~/.extra ] && . ~/.extra
 
-# define prompt
+get_dir() {
+  # get current directory without trailing slash, keeping ~ for home
+  local dir="${(%):-%~}"  # Expand %~ like in prompt
+  [[ "$dir" != "/" ]] && dir="${dir%/}" # remove trailing slash if not root /
+  echo "$dir"
+}
 git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-PROMPT='%{$fg[magenta]%}%~%{$fg[black]%}$(git_branch)%  %{$reset_color%}> '
+PROMPT='%{$fg[magenta]%}$(get_dir)%{$fg[black]%}$(git_branch)%  %{$reset_color%}> '
 
 # load plugins (must be done last)
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
