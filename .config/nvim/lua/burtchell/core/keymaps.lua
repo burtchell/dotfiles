@@ -1,60 +1,59 @@
--- vanilla nvim keymaps go here
--- plugin-specific keymaps will go in their respective files
+local function map(m, k, v)
+  vim.keymap.set(m, k, v, { noremap = true, silent = true })
+end
 
-local opts = { noremap = true, silent = true }
-
-local keymap = vim.api.nvim_set_keymap
-
--- space as leader key
-keymap("", "<Space>", "<Nop>", opts)
+map("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
+-- better window navigation
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
+map("n", "<C-l>", "<C-w>l")
 
--- NORMAL --
--- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+-- resize with arrows
+map("n", "<C-Up>", ":resize -2<CR>")
+map("n", "<C-Down>", ":resize +2<CR>")
+map("n", "<C-Left>", ":vertical resize -2<CR>")
+map("n", "<C-Right>", ":vertical resize +2<CR>")
 
--- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+-- navigate buffers
+map("n", "<S-l>", ":bnext<CR>")
+map("n", "<S-h>", ":bprevious<CR>")
 
--- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+-- move text up and down
+map("n", "<A-j>", "<Esc>:m .+1<CR>==gi")
+map("n", "<A-k>", "<Esc>:m .-2<CR>==gi")
 
--- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+-- close buffers
+map("n", "<C-x>", ":bdelete!<CR>")
 
--- Close buffers
-keymap("n", "<C-x>", ":bdelete!<CR>", opts)
+-- subsequent indents in visual mode
+map("v", "<", "<gv")
+map("v", ">", ">gv")
 
--- VISUAL --
--- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+-- move text up and down (visual mode)
+map("v", "<A-j>", ":m .+1<CR>==")
+map("v", "<A-k>", ":m .-2<CR>==")
+map("v", "p", '"_dP')
 
--- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
+-- move text up and down (vertical visual mode)
+map("x", "K", ":move '<-2<CR>gv-gv")
+map("x", "J", ":move '>+1<CR>gv-gv")
+map("x", "<A-j>", ":move '>+1<CR>gv-gv")
+map("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
--- Visual Block --
--- Move text up and down
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+--
+-- PLUGINS (note: some keymaps are set in plugin configs)
+--
+
+map("n", "<C-n>", "<cmd>NvimTreeToggle<cr>")
+
+map("n", "<leader>r", ":RenderMarkdown toggle<CR>")
+
+map("n", "<C-p>", "<cmd>Telescope find_files<cr>")
+map("n", "<C-t>", "<cmd>Telescope live_grep<cr>")
+
+map("n", "<leader>z", ":ZenMode<CR>")
+

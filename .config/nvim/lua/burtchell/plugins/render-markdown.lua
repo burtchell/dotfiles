@@ -1,4 +1,4 @@
-# https://github.com/MeanderingProgrammer/render-markdown.nvim
+-- https://github.com/MeanderingProgrammer/render-markdown.nvim
 
 return {
   'MeanderingProgrammer/render-markdown.nvim',
@@ -28,8 +28,5 @@ return {
         border = "thick",
       }
     })
-
-    vim.keymap.set("n", "<leader>r", ":RenderMarkdown toggle<CR>")
-    -- vim.keymap.set("n", "<leader>p", ":RenderMarkdown preview")
   end
 }

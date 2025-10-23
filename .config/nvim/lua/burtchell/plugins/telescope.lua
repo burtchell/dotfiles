@@ -5,14 +5,6 @@ return {
   branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    -- TODO: unable to search files on WSL with this extension
-    -- {
-    --   "nvim-telescope/telescope-fzf-native.nvim",
-    --   build = "make",
-    --   config = function()
-    --     require("telescope").load_extension("fzf")
-    --   end,
-    -- },
     "nvim-tree/nvim-web-devicons",
   },
 
@@ -47,8 +39,5 @@ return {
         },
       },
     })
-
-    vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>")
-    vim.keymap.set("n", "<C-t>", "<cmd>Telescope live_grep<cr>")
   end
 }

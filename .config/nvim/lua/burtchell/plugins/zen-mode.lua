@@ -9,6 +9,5 @@ return {
     zen_mode.setup({
       width = 120,
     })
-    vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
   end
 }
