@@ -38,6 +38,10 @@ local options = {
 
   scrolloff = 8,
   sidescrolloff = 8,
+
+  foldmethod = "expr",
+  foldexpr = "v:lua.vim.treesitter.foldexpr()",
+  -- foldcolumn = "0",
 }
 
 local windowOptions = {

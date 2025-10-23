@@ -1,3 +1,11 @@
+-- open all folds in current window
+vim.api.nvim_create_autocmd({ "BufReadPost", "FileReadPost" }, {
+  pattern = "*",
+  callback = function()
+    vim.wo.foldlevel = 99 -- arbitrary number
+  end,
+})
+
 -- ensure signcolumn has no background color
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
@@ -39,7 +47,7 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "*",
   callback = function()
-    if #vim.api.nvim_list_bufs() == 1 and vim.bo.filetype == "NvimTree" then
+    if vim.api.nvim_list_bufs() == 1 and vim.bo.filetype == "NvimTree" then
       vim.cmd("quit")
     end
   end,
