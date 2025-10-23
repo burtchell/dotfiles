@@ -1,23 +1,37 @@
 #!/usr/bin/env bash
 
-DIRS=(
-    "$HOME/dev"
-    "$HOME"
-)
+DIR_FILE="$HOME/.config/tmux/dirs.txt"
+DEFAULT_DIRS=($HOME/ $HOME/.config/ $HOME/dev/*/)
+dir_list=()
+
+# expand globs from a line
+expand_line() {
+    local line="$1"
+    local expanded=( )
+    eval "expanded=($line)"
+    for d in "${expanded[@]}"; do
+        [[ -d "$d" ]] && dir_list+=("$d")
+    done
+}
+
+if [[ -f "$DIR_FILE" ]]; then
+    while IFS= read -r line; do
+        [[ -n "$line" ]] && expand_line "$line"
+    done < "$DIR_FILE"
+else
+    for d in "${DEFAULT_DIRS[@]}"; do
+        [[ -d "$d" ]] && dir_list+=("$d")
+    done
+fi
 
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    # selected=$(find . "${DIRS[@]}" -type d -mindepth 1 -maxdepth 1 \
-    #     | sed "s|^$HOME/||" \
-    #     | fzf --margin 10% --color="bw")
+    selected=$(printf "%s\n" "${dir_list[@]}" \
+        | sed "s|^$HOME/|~/|" \
+        | sk --margin 5% --color="bw")
 
-    # with rust-based programs
-    selected=$(fd . "${DIRS[@]}" --type=dir --max-depth=1 --full-path --base-directory $HOME \
-        | sed "s|^$HOME/||" \
-        | sk --margin 10% --color="bw")
-
-    [[ $selected ]] && selected="$HOME/$selected"
+    [[ -n "$selected" ]] && selected="${selected/#\~/$HOME}"  # convert ~ back to $HOME
 fi
 
 [[ ! $selected ]] && exit 0

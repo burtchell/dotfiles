@@ -27,7 +27,7 @@ Install [homebrew](https://brew.sh) and run the "Next Steps" commands:
 Reload the terminal. Then, install the following packages with homebrew:
 
 ```
-brew install zsh-syntax-highlighting zsh-autosuggestions neovim eza zoxide fzf fd sk
+brew install zsh-syntax-highlighting zsh-autosuggestions neovim eza zoxide fzf sk
 ```
 
 ## Clone and Link

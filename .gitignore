@@ -4,6 +4,8 @@
 !.config/fish/functions/keychain.fish
 !.config/fish/config.fish
 
+.config/tmux/dirs.txt
+
 .config/zsh/.zcompdump
 
 # lazy.nvim
