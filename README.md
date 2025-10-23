@@ -4,10 +4,16 @@ My configuration files. Everything should work with WSL and macOS unless otherwi
 
 ## Dependencies
 
-Install the following using your package manager. For example:
+Install the following using your package manager:
 
 ```
-sudo apt install stow tmux
+zsh tmux stow
+```
+
+Set zsh as default shell:
+
+```
+chsh -s $(which zsh)
 ```
 
 ### Homebrew
@@ -21,15 +27,7 @@ Install [homebrew](https://brew.sh) and run the "Next Steps" commands:
 Reload the terminal. Then, install the following packages with homebrew:
 
 ```
-brew install zsh zsh-syntax-highlighting zsh-autosuggestions neovim eza zoxide fzf fd sk
-```
-
-### zsh
-
-Set zsh as default shell:
-
-```
-chsh -s $(which zsh)
+brew install zsh-syntax-highlighting zsh-autosuggestions neovim eza zoxide fzf fd sk
 ```
 
 ## Clone and Link
