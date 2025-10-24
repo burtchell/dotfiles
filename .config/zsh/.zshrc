@@ -30,28 +30,13 @@ HISTFILE=~/.zsh_history
 
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)  # fzf history widget
-
-# lazy-load nvm
-# lazy_load_nvm() {
-#   unset -f node nvm
-#   export NVM_DIR=~/.nvm
-#   [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
-# }
-# node() {
-#   lazy_load_nvm
-#   node $@
-# }
-# nvm() {
-#   lazy_load_nvm
-#   node $@
-# }
+export FZF_DEFAULT_OPTS="--style minimal --gutter ' ' --color=bw,hl:magenta,hl+:magenta"
 
 [ -r ~/.config/zsh/aliases.zsh ] && . ~/.config/zsh/aliases.zsh
 [ -r ~/.config/zsh/extra.zsh ] && . ~/.config/zsh/extra.zsh
 [ -r ~/.extra ] && . ~/.extra
 
 get_dir() {
-  # get current directory without trailing slash, keeping ~ for home
   local dir="${(%):-%~}"  # expand %~ like in prompt
   [[ "$dir" != "/" ]] && dir="${dir%/}" # remove trailing slash if not root /
   echo "$dir"
