@@ -29,19 +29,7 @@ HISTFILE=~/.zsh_history
 [ -d /opt/homebrew/bin ] && export PATH="/opt/homebrew/bin:$PATH"
 
 eval "$(zoxide init zsh)"
-# source <(fzf --zsh)  # fzf history widget
-# source <(sk --shell zsh)  # sk history widget
-
-# lazy-load conda
-function conda() {
-  unset -f conda
-  if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
-    . "$HOME/miniconda3/etc/profile.d/conda.sh"
-  else
-    export PATH="$HOME/miniconda3/bin:$PATH"
-  fi
-  conda "$@"
-}
+source <(fzf --zsh)  # fzf history widget
 
 # lazy-load nvm
 # lazy_load_nvm() {
@@ -64,7 +52,7 @@ function conda() {
 
 get_dir() {
   # get current directory without trailing slash, keeping ~ for home
-  local dir="${(%):-%~}"  # Expand %~ like in prompt
+  local dir="${(%):-%~}"  # expand %~ like in prompt
   [[ "$dir" != "/" ]] && dir="${dir%/}" # remove trailing slash if not root /
   echo "$dir"
 }
