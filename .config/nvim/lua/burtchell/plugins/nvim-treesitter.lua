@@ -23,7 +23,7 @@ return {
         "css",
         "cuda",
         "dockerfile",
-        "fish",
+        "gdscript",
         "godot_resource",
         "html",
         "javascript",

@@ -48,7 +48,7 @@ Reload the terminal to ensure all changes have been made.
 
 ## `~/.extra`
 
-If you have any extra commands and configurations that need to be loaded without forking/pushing to this repo, put them in `~/.extra`. This file will be untracked and can be used to add anything private. My `/.config/fish/config.fish` script will invoke this using bash every time fish starts up. Here's what mine looks like:
+Any private commands/configurations that need to be loaded without forking/pushing to this repo, can be put in `~/.extra`. This file will be untracked and sourced by `.zshrc`. For example:
 
 ```
 GIT_AUTHOR_NAME="Brandon Alexander Burtchell"

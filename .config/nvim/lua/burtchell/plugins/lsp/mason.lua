@@ -26,8 +26,8 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
+        "bashls",
         "lua_ls",
-        "fish_lsp",
         "pyright",
         "clangd",
       },

@@ -28,7 +28,7 @@ HISTFILE=~/.zsh_history
 [ -d /home/linuxbrew/.linuxbrew/bin ] && export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 [ -d /opt/homebrew/bin ] && export PATH="/opt/homebrew/bin:$PATH"
 # TODO: is there a version-agnostic way to do this? maybe try nvm again now that i'm on zsh
-[ -d /opt/homebrew/opt/node@22/bin ] && export PATH="/opt/homebrew/opt/node@22/bin:$PATH"  
+[ -d $(brew --prefix)/opt/node@22/bin ] && export PATH="$(brew --prefix)/opt/node@22/bin:$PATH"  
 
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)  # fzf history widget
