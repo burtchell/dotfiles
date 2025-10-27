@@ -1,10 +1,10 @@
 #!/usr/bin/env zsh
 
-# allow aliases to be sudo'ed
-alias sudo="sudo "
+alias sudo="sudo " # allow aliases to be sudo'ed
 
-# if on WSL, add explorer alias
-[ -x explorer.exe ] && alias open="explorer.exe"
+if command -v explorer.exe >/dev/null 2>&1; then
+  alias open="explorer.exe"
+fi
 
 alias reload="exec $SHELL -l" # reload the shell
 alias :q="exit"
@@ -62,7 +62,7 @@ alias tmkt="tmux kill-session -t"
 alias tmn="tmux new-session"
 alias tmns="tmux new -s"
 
-# Always enable colored grep output
+# always enable colored grep output
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'

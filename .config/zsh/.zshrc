@@ -24,9 +24,11 @@ HISTSIZE=100000
 SAVEHIST=100000
 HISTFILE=~/.zsh_history
 
-# load homebrew in linux or macOS
+[ -d /mnt/c/Windows ] && export PATH="/mnt/c/Windows:$PATH"
+
 [ -d /home/linuxbrew/.linuxbrew/bin ] && export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 [ -d /opt/homebrew/bin ] && export PATH="/opt/homebrew/bin:$PATH"
+
 # TODO: is there a version-agnostic way to do this? maybe try nvm again now that i'm on zsh
 [ -d $(brew --prefix)/opt/node@22/bin ] && export PATH="$(brew --prefix)/opt/node@22/bin:$PATH"  
 

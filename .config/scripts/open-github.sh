@@ -6,8 +6,7 @@ url=$(. ~/.config/scripts/get-github-url.sh)
 
 if [[ ! -z $url ]]; then
     echo "$url"
-    if command -v explorer.exe >/dev/null 2>&1
-    then
+    if command -v explorer.exe >/dev/null 2>&1; then
       explorer.exe "$url"  # WSL-compatible
     else
       open "$url"
