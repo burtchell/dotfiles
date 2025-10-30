@@ -44,6 +44,9 @@ map("x", "J", ":move '>+1<CR>gv-gv")
 map("x", "<A-j>", ":move '>+1<CR>gv-gv")
 map("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
+vim.keymap.set({ "n", "v", "x" }, "<leader>lf", vim.lsp.buf.format, { desc = "Format current buffer" })
+map("n", "<leader>d", ":lua vim.diagnostic.open_float()<CR>")
+
 --
 -- PLUGINS (note: some keymaps are set in plugin configs)
 --
@@ -56,4 +59,3 @@ map("n", "<C-p>", "<cmd>Telescope find_files<cr>")
 map("n", "<C-t>", "<cmd>Telescope live_grep<cr>")
 
 map("n", "<leader>z", ":ZenMode<CR>")
-

@@ -9,10 +9,6 @@ return {
     { "antosha417/nvim-lsp-file-operations", config = true },
   },
   config = function()
-    local map = vim.keymap.set
-    -- keymaps
-    map({ "n", "v", "x" }, "<leader>lf", vim.lsp.buf.format, { desc = "Format current buffer" })
-
     vim.diagnostic.config({
       signs = {
         text = {
