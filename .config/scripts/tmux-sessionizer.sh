@@ -29,7 +29,7 @@ if [[ $# -eq 1 ]]; then
 else
     selected=$(printf "%s\n" "${dir_list[@]}" \
         | sed "s|^$HOME/|~/|" \
-        | fzf --margin 5% --style minimal --gutter ' ' --color="bw,hl:magenta,hl+:magenta")
+        | fzf --margin 5% --style minimal --gutter ' ' --color="bw,hl:magenta,fg+:-1,bg+:-1,hl+:magenta")
 
     [[ -n "$selected" ]] && selected="${selected/#\~/$HOME}"  # convert ~ back to $HOME
 fi

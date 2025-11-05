@@ -34,7 +34,7 @@ HISTFILE=~/.zsh_history
 
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)  # fzf history widget
-export FZF_DEFAULT_OPTS="--style minimal --gutter ' ' --color=bw,hl:magenta,hl+:magenta"
+export FZF_DEFAULT_OPTS="--style minimal --gutter ' ' --color=bw,hl:magenta,fg+:-1,bg+:-1,hl+:magenta"
 
 [ -r ~/.config/zsh/aliases.zsh ] && . ~/.config/zsh/aliases.zsh
 [ -r ~/.config/zsh/extra.zsh ] && . ~/.config/zsh/extra.zsh
