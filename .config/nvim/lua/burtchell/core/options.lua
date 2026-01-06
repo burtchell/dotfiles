@@ -48,8 +48,6 @@ local windowOptions = {
   -- colorcolumn = "100",  -- fill a vertical column for line-limit hint
 }
 
--- vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
-
 vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do

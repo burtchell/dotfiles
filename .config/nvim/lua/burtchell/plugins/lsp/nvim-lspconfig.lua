@@ -10,17 +10,15 @@ return {
   },
   config = function()
     vim.diagnostic.config({
-      signs = {
-        text = {
-          [vim.diagnostic.severity.ERROR] = 'x',
-          [vim.diagnostic.severity.WARN] = '!',
-          [vim.diagnostic.severity.HINT] = 'i',
-          [vim.diagnostic.severity.INFO] = '?',
-        },
-      }
-    })
-
-    vim.diagnostic.config({
+      signs = false,
+      -- signs = {
+      --   text = {
+      --     [vim.diagnostic.severity.ERROR] = 'x',
+      --     [vim.diagnostic.severity.WARN] = '!',
+      --     [vim.diagnostic.severity.HINT] = 'i',
+      --     [vim.diagnostic.severity.INFO] = '?',
+      --   },
+      -- },
       virtual_text = false, -- disable in-line virtual text
       update_in_insert = true,
       underline = true,
@@ -34,6 +32,12 @@ return {
         prefix = "",
       },
     })
+
+    -- attempted to set bg highlight of sign-column diagnostics to none but it overrided the fg color too
+    -- vim.api.nvim_set_hl(0, "DiagnosticSignError", { bg = nil })
+    -- vim.api.nvim_set_hl(0, "DiagnosticSignWarn",  { bg = nil })
+    -- vim.api.nvim_set_hl(0, "DiagnosticSignInfo",  { bg = nil })
+    -- vim.api.nvim_set_hl(0, "DiagnosticSignHint",  { bg = nil })
 
     -- manually config any special LSP servers
     vim.lsp.config("lua_ls", {
