@@ -49,13 +49,13 @@ return {
 
 		local branch = {
 			"branch",
-			icons_enabled = true,
-			icon = "",
+			icons_enabled = false,
+			-- icon = "",
 		}
 
 		local location = {
 			"location",
-			padding = { left = 1, right = 1 },
+			padding = { left = 0, right = 0 },
 		}
 
 		-- local spaces = function()
@@ -74,16 +74,16 @@ return {
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { branch, diagnostics },
-				-- lualine_c = { "filename" },
+				lualine_c = { "filename" },
 				-- lualine_x = { "encoding", "fileformat", "filetype" },
-				lualine_x = { diff, fileformat, filetype },
+				lualine_x = { diff, "encoding" },
 				lualine_y = { "progress" },
 				lualine_z = { location },
 			},
 			inactive_sections = {
 				lualine_a = {},
 				lualine_b = {},
-				lualine_c = {},
+				lualine_c = { "filename" },
 				lualine_x = { "location" },
 				lualine_y = {},
 				lualine_z = {},
