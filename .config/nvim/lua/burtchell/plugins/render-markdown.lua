@@ -5,6 +5,9 @@ return {
   dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
   ---@module 'render-markdown'
   ---@type render.md.UserConfig
+  keys = {
+    { "<leader>r", "<cmd>RenderMarkdown toggle<CR>", mode = "n", desc = "Toggle Markdown Rendering" },
+  },
   opts = {},
   config = function()
     local render_md = require("render-markdown")

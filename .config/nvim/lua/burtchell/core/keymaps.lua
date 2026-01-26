@@ -1,3 +1,5 @@
+-- note: plugin keymaps are in their respective configuration files (using Lazy.nvim's keys = {})
+
 local function map(m, k, v)
   vim.keymap.set(m, k, v, { noremap = true, silent = true })
 end
@@ -45,17 +47,4 @@ map("x", "<A-j>", ":move '>+1<CR>gv-gv")
 map("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
 vim.keymap.set({ "n", "v", "x" }, "<leader>lf", vim.lsp.buf.format, { desc = "Format current buffer" })
-map("n", "<leader>d", ":lua vim.diagnostic.open_float()<CR>")
-
---
--- PLUGINS (note: some keymaps are set in plugin configs)
---
-
-map("n", "<C-n>", "<cmd>NvimTreeToggle<cr>")
-
-map("n", "<leader>r", ":RenderMarkdown toggle<CR>")
-
-map("n", "<C-p>", "<cmd>Telescope find_files<cr>")
-map("n", "<C-t>", "<cmd>Telescope live_grep<cr>")
-
-map("n", "<leader>z", ":ZenMode<CR>")
+vim.keymap.set("n", "<leader>d", ":lua vim.diagnostic.open_float()<CR>", { desc = "Get diagnostic" })

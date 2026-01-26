@@ -2,8 +2,11 @@
 
 return {
   "folke/zen-mode.nvim",
-  -- opts = {
-  -- },
+
+  keys = {
+    { "<leader>z", "<cmd>ZenMode<CR>", mode = "n", desc = "Toggle Zen Mode" },
+  },
+
   config = function()
     local zen_mode = require("zen-mode")
     zen_mode.setup({

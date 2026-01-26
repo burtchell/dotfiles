@@ -8,6 +8,11 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
 
+  keys = {
+    { "<C-p>", "<cmd>Telescope find_files<cr>", mode = "n" },
+    { "<C-t>", "<cmd>Telescope live_grep<cr>", mode = "n" },
+  },
+
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
