@@ -76,7 +76,7 @@ return {
 				lualine_b = { branch, diagnostics },
 				lualine_c = { "filename" },
 				-- lualine_x = { "encoding", "fileformat", "filetype" },
-				lualine_x = { diff, "encoding" },
+				lualine_x = { diff },
 				lualine_y = { "progress" },
 				lualine_z = { location },
 			},
