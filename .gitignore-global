@@ -1,5 +1,7 @@
 # global git-ignores
 
+~*$  # microsoft office temp files
+
 **/.vscode/
 **/.history/
 

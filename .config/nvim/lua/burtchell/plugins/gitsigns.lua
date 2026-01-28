@@ -3,6 +3,9 @@
 return {
   "lewis6991/gitsigns.nvim",
   event = { "BufReadPre", "BufNewFile" },
+  keys = {
+    { "<leader>gd", "<cmd>Gitsigns diffthis<CR>", mode = "n", desc = "Git-diff current file" },
+  },
   config = function()
     local gitsigns = require("gitsigns")
 
