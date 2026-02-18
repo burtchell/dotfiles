@@ -17,7 +17,7 @@ return {
 			"diagnostics",
 			sources = { "nvim_diagnostic" },
 			sections = { "error", "warn" },
-			symbols = { error = " ", warn = " " },
+			symbols = { error = "E:", warn = "W:" },
 			colored = false,
 			update_in_insert = false,
 			always_visible = false,
@@ -30,55 +30,35 @@ return {
 			cond = hide_in_width,
 		}
 
-		local fileformat = {
-			"fileformat",
-			symbols = {
-				unix = "", -- e712
-				dos = "", -- e70f
-				mac = "", -- e711
-			},
-		}
-
-		local filetype = {
-			"filetype",
-			colored = false,
-			icons_enabled = true,
-			icon_only = true,
-			icon = nil,
-		}
-
 		local branch = {
 			"branch",
 			icons_enabled = false,
-			-- icon = "",
 		}
 
-		local location = {
-			"location",
-			padding = { left = 0, right = 0 },
-		}
-
-		-- local spaces = function()
-		-- 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
-		-- end
+    -- overwrite color change in middle section when switching modes
+    local custom_gruvbox = require'lualine.themes.gruvbox_dark'
+    custom_gruvbox.insert.c = custom_gruvbox.normal.c
+    custom_gruvbox.visual.c = custom_gruvbox.normal.c
+    custom_gruvbox.replace.c = custom_gruvbox.normal.c
+    custom_gruvbox.command.c = custom_gruvbox.normal.c
+    custom_gruvbox.inactive.c = custom_gruvbox.normal.c
 
 		lualine.setup({
 			options = {
 				icons_enabled = true,
-				theme = "auto",
-				component_separators = { left = "", right = "" },
+				theme = custom_gruvbox, -- "auto",
+				component_separators = { left = "", right = "|" },
 				section_separators = { left = "", right = "" },
-				disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
+				disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline", "undotree", "diff" },
 				always_divide_middle = true,
 			},
 			sections = {
 				lualine_a = { "mode" },
-				lualine_b = { branch, diagnostics },
+				lualine_b = { branch },
 				lualine_c = { "filename" },
-				-- lualine_x = { "encoding", "fileformat", "filetype" },
-				lualine_x = { diff },
+				lualine_x = { diff, diagnostics },
 				lualine_y = { "progress" },
-				lualine_z = { location },
+				lualine_z = { "location" },
 			},
 			inactive_sections = {
 				lualine_a = {},
