@@ -13,6 +13,36 @@ return {
 			return vim.fn.winwidth(0) > 80
 		end
 
+    local filename = {
+      "filename",
+      path = 1,  -- relative path
+      fmt = function(name)
+          if name == '' then
+            return ''
+          end
+
+          local parts = vim.split(name, '/')
+          local filename = table.remove(parts)
+
+          -- shorten directories
+          for i, part in ipairs(parts) do
+            if part:sub(1, 1) == '.' then
+              -- keep dot + first real letter
+              parts[i] = '.' .. part:sub(2, 2)
+            else
+              parts[i] = part:sub(1, 1)
+            end
+          end
+
+          local short = table.concat(parts, '/')
+          if short ~= '' then
+            short = short .. '/'
+          end
+
+          return short .. filename
+      end,
+    }
+
 		local diagnostics = {
 			"diagnostics",
 			sources = { "nvim_diagnostic" },
@@ -55,7 +85,7 @@ return {
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { branch },
-				lualine_c = { "filename" },
+				lualine_c = { filename },
 				lualine_x = { diff, diagnostics },
 				lualine_y = { "progress" },
 				lualine_z = { "location" },
@@ -63,7 +93,7 @@ return {
 			inactive_sections = {
 				lualine_a = {},
 				lualine_b = {},
-				lualine_c = { "filename" },
+				lualine_c = { filename },
 				lualine_x = { "location" },
 				lualine_y = {},
 				lualine_z = {},
